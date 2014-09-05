@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">Entertainment</string>
+    <string name="display">Enjoyment</string>
+    <string name="roger">Rogger Federer</string>
+    <string name="sania">Sania Mirza</string>
+    <string name="anand">Viswanadhan Anand</string>
+    <string name="ronaldo">Cristiano Ronaldo</string>
+    <string name="sachin">Tendulkar</string>
+    <string name="anuska">Anushka</string>
+    <string name="prabas">Prabhas</string>
+    <string name="raj">Rajmouli</string>
+    <string name="rana">rana</string>
+ 
+
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2" 
+    android:gravity="center"
+    android:id="@+id/main_id">
+
+    <LinearLayout
+        android:id="@+id/sports"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sport"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/roger_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/roger"
+            android:textColor="#ffffff" 
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/sania_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/sania"
+            android:textColor="#ffffff" 
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/anand_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/anand"
+            android:textColor="#ffffff"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/sachin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/sachin"
+            android:textColor="#ffffff" 
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/ronaldo_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/ronaldo"
+            android:textColor="#ffffff" 
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/movies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bahubali"
+        android:orientation="vertical"
+        
+       >
+
+        <Button
+            android:id="@+id/rana_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/rana"
+            android:textColor="#ffffff"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/raj_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/raj"
+            android:textColor="#ffffff"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/prabhas_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/prabas"
+            android:textColor="#ffffff"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/anuska_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/anuska"
+            android:textColor="#ffffff"
+            android:padding="10dp" />
+
+       
+    </LinearLayout>
+
+</LinearLayout>

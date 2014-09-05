@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/yourpic">
+    
+
+    
+    
+    <LinearLayout
+        android:id="@+id/l3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/st_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sttxt" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/st_edt"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+    </LinearLayout>
+      <LinearLayout
+        android:id="@+id/l4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center_horizontal"
+        >
+        
+          
+          <Button 
+              android:id="@+id/y_bt1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/yes"/>
+           <Button 
+              android:id="@+id/y_bt2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/no"/>
+    
+</LinearLayout>
+</LinearLayout>

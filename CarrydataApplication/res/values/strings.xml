@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">CarrydataApplication</string>
+    <string name="hint1">Enter your Name!</string>
+    <string name="hint2">Enter your Stream!</string>
+    <string name="namet">Name</string>
+    <string name="streamt">Stream</string>
+     <string name="welcome">You Have Confirmed Your Stream. Welcome</string>
+    <string name="sttxt">Your Stream is:</string>
+    <string name="nothing"></string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="home">Back</string>
+     <string name="data1">please enter valid one</string>
+<string name="message">you entered wrong stream</string>
+</resources>

@@ -1,5 +1,7 @@
 <resources>
 
     <string name="app_name">UserInfo</string>
+    <string name="user">Get User Details</string>
+    
 
 </resources>

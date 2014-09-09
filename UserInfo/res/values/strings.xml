@@ -2,6 +2,12 @@
 
     <string name="app_name">UserInfo</string>
     <string name="user">Get User Details</string>
+        <string name="username">Username : </string>
+        <string name="pwd">Password : </string>
+        <string name="email">Email : </string>
+        <string name="phn">Phone : </string>
+        <string name="address">Address : </string>
+    
     
 
 </resources>

@@ -2,7 +2,6 @@ package com.pcs.implicitapplication;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -40,26 +39,36 @@ public class ImplicitActivity extends Activity implements OnClickListener{
 		switch(v.getId())
 		{
 		case R.id.sports :
-			intent = new Intent("com.pcs.responseapplication.SHOW_SPORTS_IMAGE");
+			intent = new Intent("com.pcs.responseapplication.ResponseActivity.SHOW_SPORTS_IMAGE");
+			intent.addCategory(Intent.CATEGORY_LAUNCHER);
+			startActivity(intent);
 			break;
 		case R.id.movies :
-			intent = new Intent("com.pcs.responseapplication.SHOW_MOVIES_IMAGE");
+			intent = new Intent("com.pcs.responseapplication.ResponseActivity.SHOW_MOVIES_IMAGE");
+			intent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+			startActivity(intent);
 			break;
 
 		case R.id.study :
-			intent = new Intent("com.pcs.responseapplication.SHOW_STUDY_IMAGE");
+			intent = new Intent("com.pcs.responseapplication.ResponseActivity.SHOW_STUDY_IMAGE");
+			intent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+			startActivity(intent);
 			break;
 
 		case R.id.text :
-			intent = new Intent("com.pcs.responseapplication.SHOW_TEXT");
-			intent.setData(Uri.parse("hello"));
+			intent = new Intent("com.pcs.responseapplication.ResponseActivity.SHOW_TEXT");
+			intent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+			startActivity(intent);
 			break;
 
 		default :
 			break;
 
 		}
-		startActivity(intent);
+		
 	}
 
 }

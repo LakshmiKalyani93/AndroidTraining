@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">ImplicitApplication</string>
+        <string name="sports">Sports</string>
+        <string name="movies">Entertainment</string>
+            <string name="study">Education</string>
+                        <string name="text">Show Text</string>
+            
+            
+        
+
+</resources>

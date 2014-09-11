@@ -1,5 +1,7 @@
 <resources>
 
     <string name="app_name">ResponseApplication</string>
+    <string name="text">Yes!! Your Code Got Executed</string>
+    <string name="no_output">NO output</string>
 
 </resources>

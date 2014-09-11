@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.pcs.implicitapplication.R.layout"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="com.pcs.responseapplication.R"/>
+<fullyQualifiedTypeName name="com.pcs.responseapplication.R.id"/>
+<fullyQualifiedTypeName name="android.provider.SyncStateContract.Constants"/>
+<fullyQualifiedTypeName name="com.pcs.constants.Helper"/>
+<fullyQualifiedTypeName name="com.pcs.constants.Helper.DataExtras"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="com.pcs.responseapplication.R.drawable"/>
+<fullyQualifiedTypeName name="com.pcs.reponseapplication.ResponseActivity"/>
+<fullyQualifiedTypeName name="com.pcs.responseapplication.R.string"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="com.pcs.implicitapplication.R.id"/>
+</qualifiedTypeNameHistroy>

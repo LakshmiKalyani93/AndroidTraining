@@ -1,0 +1,22 @@
+package com.pcs.reponseapplication;
+
+
+import com.pcs.responseapplication.R;
+
+import android.app.Activity;
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class ResponseActivity extends Activity{
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.response);
+		TextView textview=(TextView)findViewById(R.id.txt_view);
+		Uri uri=getIntent().getData();
+		 String choice=getIntent().getAction();
+		 if(chose==)
+	}
+}

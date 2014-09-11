@@ -1,0 +1,12 @@
+package com.pcs.details;
+
+public class User {
+	
+	private static username;
+	private static password;
+	private static email;
+	private static phonenumber;
+	private static address;
+	
+
+}

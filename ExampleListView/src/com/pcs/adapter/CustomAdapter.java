@@ -13,15 +13,15 @@ import android.widget.TextView;
 public class CustomAdapter extends BaseAdapter {
 
 	private ArrayList< UserDetails> users;
- private Context mcontext;
-	
+	private Context mcontext;
+
 
 	public CustomAdapter(Context context,
-		ArrayList<UserDetails> userList) {
-		
+			ArrayList<UserDetails> userList) {
+
 		mcontext=context;
-		 users =userList;
-}
+		users =userList;
+	}
 
 	@Override
 	public int getCount() {
@@ -41,10 +41,10 @@ public class CustomAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		TextView tv= new TextView(mcontext);
-	tv.setText(users.get(position).getEmail());
-	
+		tv.setText("CustomerName:"+users.get(position).getCustomername()+"\n Account Number:"+users.get(position).getAccountnumber()+"\nCustomer ID:"+users.get(position).getCustomerid()+"\nEmail:"+users.get(position).getEmail());
+		tv.setPadding(20, 10, 5, 10);
 		return tv;
 	}
 
-	
+
 }

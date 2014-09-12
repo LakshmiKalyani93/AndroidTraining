@@ -6,12 +6,13 @@ import java.util.ArrayList;
 import com.pcs.adapter.CustomAdapter;
 import com.pcs.helper.UserDetails;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
 
-public class ListItemsActivity extends ListActivity{
+public class ListItemsActivity extends Activity{
 	UserDetails userobj;
 	
 	@Override
@@ -54,7 +55,6 @@ public class ListItemsActivity extends ListActivity{
 		userobj.setAccountnumber("1245345");
 		userobj.setEmail("dharma@pcs.com");
 		userList.add(userobj);
-		
 		
 		
 		listView.setAdapter(adapter);

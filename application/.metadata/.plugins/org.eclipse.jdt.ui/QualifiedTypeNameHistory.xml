@@ -14,9 +14,9 @@
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.pcs.responseapplication.R.drawable"/>
 <fullyQualifiedTypeName name="com.pcs.reponseapplication.ResponseActivity"/>
-<fullyQualifiedTypeName name="com.pcs.responseapplication.R.string"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.net.Uri"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="com.pcs.implicitapplication.R.id"/>
+<fullyQualifiedTypeName name="com.pcs.responseapplication.R.string"/>
 </qualifiedTypeNameHistroy>

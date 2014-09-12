@@ -17,11 +17,7 @@ public class ResponseActivity extends Activity{
 
 		TextView textview=(TextView)findViewById(R.id.txt_view);
 
-
-
 		String choice=getIntent().getAction();
-
-
 
 		if(choice.equals(Helper.DataExtras.SHOW_SPORTS)){
 			textview.setBackgroundResource(R.drawable.sports);
@@ -35,6 +31,13 @@ public class ResponseActivity extends Activity{
 		else  if(choice.equals(Helper.DataExtras.SHOW_TEXT)){
 			textview.setText(getResources().getString(R.string.text));
 		}
+		else  if(choice.equals(Helper.DataExtras.SHOW_GADGETS)){
+			textview.setBackgroundResource(R.drawable.gadgets);
+		}
+		else  if(choice.equals(Helper.DataExtras.SHOW_VERSIONS)){
+			textview.setBackgroundResource(R.drawable.versions);
+		}
+		
 	}	
 
 

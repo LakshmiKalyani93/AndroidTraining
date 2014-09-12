@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.app.Activity"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="com.pcs.userinfo.R.layout"/>
 <fullyQualifiedTypeName name="com.pcs.userinfo.R.id"/>
@@ -14,4 +13,10 @@
 <fullyQualifiedTypeName name="com.pcs.helper.Helper"/>
 <fullyQualifiedTypeName name="com.pcs.helper.Helper.DetailsExtras"/>
 <fullyQualifiedTypeName name="com.pcs.details.User"/>
+<fullyQualifiedTypeName name="android.app.Activity"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="com.example.examplelistview.R"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="com.example.examplelistview.R.id"/>
 </qualifiedTypeNameHistroy>

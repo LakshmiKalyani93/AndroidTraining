@@ -41,6 +41,7 @@ public class CustomAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		TextView tv= new TextView(mcontext);
+	tv.setText(users.get(position).getEmail());
 	
 		return tv;
 	}

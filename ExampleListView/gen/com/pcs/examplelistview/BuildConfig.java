@@ -1,5 +1,5 @@
 /** Automatically generated file. DO NOT MODIFY */
-package com.example.examplelistview;
+package com.pcs.examplelistview;
 
 public final class BuildConfig {
     public final static boolean DEBUG = true;

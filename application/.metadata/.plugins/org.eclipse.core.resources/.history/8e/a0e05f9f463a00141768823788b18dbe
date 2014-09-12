@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFDB"
+    android:weightSum="3" >
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sports"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:text="@string/sports"
+            android:background="@drawable/spp"
+             />
+
+        <Button
+            android:id="@+id/movies"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+             android:text="@string/movies"
+              android:background="@drawable/enter"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/study"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+             android:text="@string/study"
+              android:background="@drawable/edu"
+            />
+
+        <Button
+            android:id="@+id/text"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+             android:text="@string/text"
+              android:background="@drawable/sms"
+           />
+    </LinearLayout>
+  
+
+</LinearLayout>

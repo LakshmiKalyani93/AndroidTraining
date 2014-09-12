@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from workspace&#x0A;- Original elements:&#x0A;     android.jpg&#x0A;     gadgets.jpeg&#x0A;     com.pcs.responseapplication.ResponseActivity.java" description="Delete elements" element1="/ImplicitApplication/res/drawable-hdpi/android.jpg" element2="/ImplicitApplication/res/drawable-hdpi/gadgets.jpeg" element3="=ResponseApplication/src&lt;com.pcs.responseapplication{ResponseActivity.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1410503453497" subPackages="false" version="1.0"/>
+</session>

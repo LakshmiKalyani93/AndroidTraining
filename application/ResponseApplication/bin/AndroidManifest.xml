@@ -21,8 +21,7 @@
                    <action android:name="com.pcs.responseapplication.ResponseActivity.SHOW_MOVIES_IMAGE"/>
                     <action android:name="com.pcs.responseapplication.ResponseActivity.SHOW_STUDY_IMAGE"/>
                      <action android:name="com.pcs.responseapplication.ResponseActivity.SHOW_GADGETS_IMAGE"/>
-                    <action android:name="com.pcs.responseapplication.ResponseActivity.SHOW_VERSIONS_IMAGE"/>
-                     <action android:name="com.pcs.responseapplication.ResponseActivity.SHOW_TEXT"/>
+                    
                 
                 <category android:name="android.intent.category.LAUNCHER"/>
                  <category android:name="android.intent.category.DEFAULT"/>

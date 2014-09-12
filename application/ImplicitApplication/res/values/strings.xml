@@ -5,7 +5,6 @@
     <string name="movies">Entertainment</string>
     <string name="study">Education</string>
     <string name="text">Show Text</string>
-    <string name="gadgets">Show Gadgets</string>
-    <string name="versions">Android Versions</string>
+   
 
 </resources>

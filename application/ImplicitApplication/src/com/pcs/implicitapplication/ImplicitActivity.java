@@ -13,9 +13,7 @@ public class ImplicitActivity extends Activity implements OnClickListener{
 	private  Button moviesBtn;
 	private  Button studyBtn;
 	private  Button textBtn;
-	private  Button gadgetsBtn;
-	private  Button versionsBtn;
-
+	
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,18 +23,14 @@ public class ImplicitActivity extends Activity implements OnClickListener{
 		moviesBtn=(Button)findViewById(R.id.movies);
 		studyBtn=(Button)findViewById(R.id.study);
 		textBtn=(Button)findViewById(R.id.text);
-		gadgetsBtn=(Button)findViewById(R.id.gadgets);
-		versionsBtn=(Button)findViewById(R.id.versions);
+		
 
 		sportsBtn.setOnClickListener(this);
 		studyBtn.setOnClickListener(this);
 		moviesBtn.setOnClickListener(this);
 		textBtn.setOnClickListener(this);
-		gadgetsBtn.setOnClickListener(this);
-		versionsBtn.setOnClickListener(this);
-
+		
 	}
-
 
 	@Override
 	public void onClick(View v) {
@@ -52,36 +46,20 @@ public class ImplicitActivity extends Activity implements OnClickListener{
 		case R.id.movies :
 			intent = new Intent("com.pcs.responseapplication.ResponseActivity.SHOW_MOVIES_IMAGE");
 			intent.addCategory(Intent.CATEGORY_LAUNCHER);
-
 			startActivity(intent);
 			break;
 
-		case R.id.gadgets :
-			intent = new Intent("com.pcs.responseapplication.ResponseActivity.SHOW_GADGETS_IMAGE");
-			intent.addCategory(Intent.CATEGORY_LAUNCHER);
-
-			startActivity(intent);
-			break;
-
-		case R.id.versions :
-			intent = new Intent("com.pcs.responseapplication.ResponseActivity.SHOW_VERSIONS_IMAGE");
-			intent.addCategory(Intent.CATEGORY_LAUNCHER);
-
-			startActivity(intent);
-			break;
 		case R.id.study :
 			intent = new Intent("com.pcs.responseapplication.ResponseActivity.SHOW_STUDY_IMAGE");
 			intent.addCategory(Intent.CATEGORY_LAUNCHER);
-
 			startActivity(intent);
 			break;
 
-
+		
 
 		case R.id.text :
 			intent = new Intent("com.pcs.responseapplication.ResponseActivity.SHOW_TEXT");
 			intent.addCategory(Intent.CATEGORY_LAUNCHER);
-
 			startActivity(intent);
 			break;
 

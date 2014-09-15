@@ -7,11 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
+
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.pcs.examplelistview.R;
-import com.pcs.helper.GetDetails;
+
 import com.pcs.helper.UserDetails;
 
 public class CustomAdapter extends BaseAdapter {
@@ -26,7 +27,7 @@ private LayoutInflater layoutInflator;
 
 		mcontext=context;
 		users =userList;
-		LayoutInflater.from(mcontext);
+		layoutInflator = LayoutInflater.from(mcontext);
 	}
 
 	@Override
@@ -47,12 +48,12 @@ private LayoutInflater layoutInflator;
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		
-		View itemView = layoutInflater.inflate(R.layout.innerlayout, null);
+		View itemView = layoutInflator.inflate(R.layout.innerlayout, null);
 		
 		ImageView imageView=(ImageView) itemView.findViewById(R.id.image);
-		Button nameBtn=(Button) itemView.findViewById(R.id.name_btn);
-		Button emailBtn=(Button) itemView.findViewById(R.id.email_btn);
-		Button phoneBtn=(Button) itemView.findViewById(R.id.phn_btn);
+		TextView nameBtn=(TextView) itemView.findViewById(R.id.name_txt);
+		TextView emailBtn=(TextView) itemView.findViewById(R.id.email_txt);
+		TextView phoneBtn=(TextView) itemView.findViewById(R.id.phn_txt);
 		
 		UserDetails user= getItem(position);
 		
@@ -61,8 +62,7 @@ private LayoutInflater layoutInflator;
 		emailBtn.setText(user.getEmail());
 		phoneBtn.setText(user.getCustomerid());
 		
-		
-		
+
 		return itemView;
 	}
 

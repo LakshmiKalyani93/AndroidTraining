@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 
 import com.pcs.adapter.CustomAdapter;
+import com.pcs.helper.GetDetails;
 import com.pcs.helper.UserDetails;
 
 import android.app.Activity;
@@ -13,7 +14,6 @@ import android.widget.ListView;
 
 
 public class ListItemsActivity extends Activity{
-	UserDetails userobj;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +24,6 @@ public class ListItemsActivity extends Activity{
 		
 		ArrayList<UserDetails> userList = new ArrayList<UserDetails>();
 		CustomAdapter adapter = new CustomAdapter(ListItemsActivity.this, userList);
-		
-		
-	
-		
 		
 		listView.setAdapter(adapter);
 		

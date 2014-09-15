@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">ExampleListView</string>
+    <string name="none"> </string>
     
 
 </resources>

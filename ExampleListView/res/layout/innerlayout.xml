@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout android:id="@+id/inner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        
+        <ImageView android:id="@+id/image"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+        
+        <RelativeLayout android:id="@+id/layout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1">
+            
+           <Button android:id="@+id/name_btn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/none"/>
+            
+            <Button android:id="@+id/email_btn"
+                android:layout_below="@id/name_btn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/none"/>
+             
+            <Button android:id="@+id/phn_btn"
+                android:layout_below="@id/email_btn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/none"/>
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    
+    
+
+</RelativeLayout>

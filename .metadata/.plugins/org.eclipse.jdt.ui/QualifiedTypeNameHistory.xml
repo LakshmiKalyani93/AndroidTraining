@@ -9,11 +9,9 @@
 <fullyQualifiedTypeName name="android.R.integer"/>
 <fullyQualifiedTypeName name="android.os.Parcelable"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
-<fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.pcs.helper.Helper"/>
 <fullyQualifiedTypeName name="com.pcs.helper.Helper.DetailsExtras"/>
 <fullyQualifiedTypeName name="com.pcs.details.User"/>
-<fullyQualifiedTypeName name="android.R"/>
 <fullyQualifiedTypeName name="android.R.layout"/>
 <fullyQualifiedTypeName name="com.example.examplelistview.R"/>
 <fullyQualifiedTypeName name="android.widget.ListView"/>
@@ -21,4 +19,12 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="android.app.Activity"/>
 <fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.id"/>
+<fullyQualifiedTypeName name="com.pcs.examplelistview.R"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="com.pcs.helper.GetDetails"/>
+<fullyQualifiedTypeName name="com.pcs.helper.UserDetails"/>
 </qualifiedTypeNameHistroy>

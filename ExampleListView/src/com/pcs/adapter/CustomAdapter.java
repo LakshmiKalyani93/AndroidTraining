@@ -7,12 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pcs.examplelistview.R;
-
 import com.pcs.helper.UserDetails;
 
 public class CustomAdapter extends BaseAdapter {
@@ -48,23 +46,43 @@ private LayoutInflater layoutInflator;
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		
-		View itemView = layoutInflator.inflate(R.layout.innerlayout, null);
+		ViewHolder holder = null;
 		
-		ImageView imageView=(ImageView) itemView.findViewById(R.id.image);
-		TextView nameBtn=(TextView) itemView.findViewById(R.id.name_txt);
-		TextView emailBtn=(TextView) itemView.findViewById(R.id.email_txt);
-		TextView phoneBtn=(TextView) itemView.findViewById(R.id.phn_txt);
+		UserDetails user= (UserDetails)getItem(position);
 		
-		UserDetails user= getItem(position);
+		if(convertView==null){
 		
-		imageView.setBackgroundResource(R.drawable.gad);
-		nameBtn.setText(user.getCustomername());
-		emailBtn.setText(user.getEmail());
-		phoneBtn.setText(user.getCustomerid());
+		convertView = layoutInflator.inflate(R.layout.innerlayout, null);
 		
-
-		return itemView;
+		holder = new ViewHolder();
+		holder.imageView=(ImageView) convertView.findViewById(R.id.image);
+		holder.nameTxt=(TextView) convertView.findViewById(R.id.name_txt);
+		 holder.emailTxt=(TextView) convertView.findViewById(R.id.email_txt);
+		 holder.phoneTxt=(TextView) convertView.findViewById(R.id.phn_txt);
+		 convertView.setTag(holder);
+		
+		}
+		else
+		{
+			holder=(ViewHolder)convertView.getTag();
+		}
+	
+		
+		holder.imageView.setBackgroundResource(R.drawable.gad);
+		holder.nameTxt.setText(user.getCustomername());
+		holder.emailTxt.setText(user.getEmail());
+		holder.phoneTxt.setText(user.getCustomerid());
+		
+		return convertView;
 	}
+	
+public class ViewHolder{
+	
 
+	public	ImageView imageView;	
+	public	TextView nameTxt;
+	public TextView emailTxt;
+	public TextView phoneTxt;
+}
 
 }

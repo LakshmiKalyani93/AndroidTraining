@@ -5,5 +5,22 @@
     <string name="stream_hint">Enter Your Stream!</string>
     <string name="pwd_hint">Enter Your Password!</string>
     <string name="login">Login</string>
+        <string name="cancel">Cancel</string>
+         <string name="ok">Ok</string>
+           <string name="cancel_dialog">Cancel Dialog</string>
+ <string name="msg_dialog">You have chosen cancel.So you dont have any selection criteria.</string>
+    
+    <string name="dialog_title">Your Selection</string>
+    <string name="dialog_success">Success</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="success_msg">Your Code Execution is Successful</string>
+    <string name="cancel_msg">Your are Cancelled Your Selection Process</string>
+    <string name="custom_ok_msg">SimpleDialogActivity Visited</string>
+    <string name="custom_cancel_msg">Selection Preocess Cancelled</string>
+    <string-array name="selection">
+        <item >Username</item>
+        <item >Stream</item>
+        <item >Password</item>
+    </string-array>
 
 </resources>

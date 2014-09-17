@@ -8,19 +8,49 @@
 package com.pcs.customdialog;
 
 public final class R {
+    public static final class array {
+        public static final int selection=0x7f050000;
+    }
     public static final class attr {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int index=0x7f020001;
+    }
+    public static final class id {
+        public static final int cancel_btn=0x7f07000b;
+        public static final int custom_cancel_btn=0x7f070005;
+        public static final int custom_rel_layout=0x7f070003;
+        public static final int linear=0x7f070000;
+        public static final int login_btn=0x7f07000a;
+        public static final int msg_txt=0x7f070002;
+        public static final int ok_btn=0x7f070004;
+        public static final int pwd_edt=0x7f070008;
+        public static final int rel_layout=0x7f070009;
+        public static final int stream_edt=0x7f070007;
+        public static final int title_txt=0x7f070001;
+        public static final int user_edt=0x7f070006;
     }
     public static final class layout {
-        public static final int dialog=0x7f030000;
+        public static final int custom=0x7f030000;
+        public static final int dialog=0x7f030001;
     }
     public static final class string {
         public static final int app_name=0x7f040000;
+        public static final int cancel=0x7f040005;
+        public static final int cancel_dialog=0x7f040007;
+        public static final int cancel_msg=0x7f04000d;
+        public static final int custom_cancel_msg=0x7f04000f;
+        public static final int custom_ok_msg=0x7f04000e;
+        public static final int dialog_cancel=0x7f04000b;
+        public static final int dialog_success=0x7f04000a;
+        public static final int dialog_title=0x7f040009;
         public static final int login=0x7f040004;
+        public static final int msg_dialog=0x7f040008;
+        public static final int ok=0x7f040006;
         public static final int pwd_hint=0x7f040003;
         public static final int stream_hint=0x7f040002;
+        public static final int success_msg=0x7f04000c;
         public static final int user_hint=0x7f040001;
     }
     public static final class style {
@@ -45,10 +75,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f060001;
     }
 }

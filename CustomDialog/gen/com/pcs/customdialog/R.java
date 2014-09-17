@@ -37,20 +37,21 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f040000;
-        public static final int cancel=0x7f040005;
-        public static final int cancel_dialog=0x7f040007;
-        public static final int cancel_msg=0x7f04000d;
-        public static final int custom_cancel_msg=0x7f04000f;
-        public static final int custom_ok_msg=0x7f04000e;
-        public static final int dialog_cancel=0x7f04000b;
-        public static final int dialog_success=0x7f04000a;
-        public static final int dialog_title=0x7f040009;
-        public static final int login=0x7f040004;
-        public static final int msg_dialog=0x7f040008;
-        public static final int ok=0x7f040006;
+        public static final int cancel=0x7f040006;
+        public static final int cancel_dialog=0x7f040008;
+        public static final int cancel_msg=0x7f04000e;
+        public static final int custom_cancel_msg=0x7f040010;
+        public static final int custom_ok_msg=0x7f04000f;
+        public static final int dialog_cancel=0x7f04000c;
+        public static final int dialog_success=0x7f04000b;
+        public static final int dialog_title=0x7f04000a;
+        public static final int help=0x7f040004;
+        public static final int login=0x7f040005;
+        public static final int msg_dialog=0x7f040009;
+        public static final int ok=0x7f040007;
         public static final int pwd_hint=0x7f040003;
         public static final int stream_hint=0x7f040002;
-        public static final int success_msg=0x7f04000c;
+        public static final int success_msg=0x7f04000d;
         public static final int user_hint=0x7f040001;
     }
     public static final class style {

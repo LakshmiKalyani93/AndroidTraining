@@ -96,11 +96,11 @@ public class SimpleDialogActivity extends Activity{
 					 **/
 
 						switch (which) {
-						case 0: Toast.makeText(SimpleDialogActivity.this, userEdt.getText().toString(), Toast.LENGTH_LONG).show();
+						case 0: Toast.makeText(SimpleDialogActivity.this,getResources().getString( R.string.help) + userEdt.getText().toString(), Toast.LENGTH_LONG).show();
 						break;
-						case 1: Toast.makeText(SimpleDialogActivity.this, streamEdt.getText().toString(), Toast.LENGTH_LONG).show();
+						case 1: Toast.makeText(SimpleDialogActivity.this,getResources().getString( R.string.help)+ streamEdt.getText().toString(), Toast.LENGTH_LONG).show();
 						break;
-						case 2: Toast.makeText(SimpleDialogActivity.this, pwdEdt.getText().toString(), Toast.LENGTH_LONG).show();
+						case 2: Toast.makeText(SimpleDialogActivity.this,getResources().getString( R.string.help)+ pwdEdt.getText().toString(), Toast.LENGTH_LONG).show();
 						break;
 						default:
 							break;

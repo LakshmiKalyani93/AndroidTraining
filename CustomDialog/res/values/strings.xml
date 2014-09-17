@@ -4,6 +4,7 @@
     <string name="user_hint">Enter UserName !</string>
     <string name="stream_hint">Enter Your Stream!</string>
     <string name="pwd_hint">Enter Your Password!</string>
+     <string name="help">You have Selected : </string>
     <string name="login">Login</string>
         <string name="cancel">Cancel</string>
          <string name="ok">Ok</string>

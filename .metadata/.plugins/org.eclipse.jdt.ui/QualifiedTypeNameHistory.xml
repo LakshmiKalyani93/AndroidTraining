@@ -27,4 +27,6 @@
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.pcs.helper.GetDetails"/>
 <fullyQualifiedTypeName name="com.pcs.helper.UserDetails"/>
+<fullyQualifiedTypeName name="android.content.ContentValues"/>
+<fullyQualifiedTypeName name="com.pcs.adapter.CustomAdapter.ViewHolder"/>
 </qualifiedTypeNameHistroy>

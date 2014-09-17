@@ -37,11 +37,11 @@ public class SimpleDialogActivity extends Activity{
  																setContentView(int) to inflate the activity's UI, using findViewById to programmatically interact with 
  																widgets in the UI, calling managedQuery(android.net.Uri, String[], String, String[], String) to retrieve 
  																cursors for data being displayed, etc. 	
-																			
+
 																Parameters:
 																	savedInstanceState If the activity is being re-initialized after previously being shut down then this 
 	 																Bundle contains the data it most recently supplied in onSaveInstanceState			
-	 																	**/
+	 **/
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dialog);
 
@@ -66,12 +66,22 @@ public class SimpleDialogActivity extends Activity{
 
 				AlertDialog.Builder builder = new AlertDialog.Builder(SimpleDialogActivity.this);
 
-				builder.setTitle(R.string.dialog_title);
+				builder.setTitle(R.string.dialog_title);/**
+				Builder android.app.AlertDialog.Builder.setTitle(int titleId)
+
+
+													Set the title using the given resource id.
+														Parameters:
+														titleId 
+															Returns:
+	 															This Builder object to allow for chaining of calls to set 
+	  															methods
+				 													**/
 				builder.setItems(R.array.selection, new OnClickListener() {
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {/**
-					
+
 																				oid com.pcs.customdialog.SimpleDialogActivity.onCreate(...).new OnClickListener() 
  																					{...}.onClick(...).new OnClickListener() {...}.onClick(DialogInterface dialog, int which)
 
@@ -83,7 +93,7 @@ public class SimpleDialogActivity extends Activity{
 																						dialog The dialog that received the click.
 																									which The button that was clicked (e.g. DialogInterface.BUTTON1) or the position of the item 
 	 																				clicked.
-					 																**/
+					 **/
 
 						switch (which) {
 						case 0: Toast.makeText(SimpleDialogActivity.this, userEdt.getText().toString(), Toast.LENGTH_LONG).show();
@@ -97,7 +107,17 @@ public class SimpleDialogActivity extends Activity{
 						}	
 					}
 				});
-				builder.setPositiveButton(R.string.dialog_success, new OnClickListener() {
+				builder.setPositiveButton(R.string.dialog_success, new OnClickListener() {	/**
+																			Builder android.app.AlertDialog.Builder.setNegativeButton(int textId, OnClickListener listener)
+
+
+																		Set a listener to be invoked when the negative button of the dialog is pressed.
+																			Parameters:
+																					textId The resource id of the text to display in the negative button
+																					listener The DialogInterface.OnClickListener to use.
+																					Returns:
+	 																					This Builder object to allow for chaining of calls to set methods
+				 														**/
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
@@ -107,7 +127,16 @@ public class SimpleDialogActivity extends Activity{
 					}
 				});
 
-				builder.setNegativeButton(R.string.dialog_cancel, new OnClickListener() {
+				builder.setNegativeButton(R.string.dialog_cancel, new OnClickListener() {	/**Builder android.app.AlertDialog.Builder.setNegativeButton(int textId, OnClickListener listener)
+
+
+																				Set a listener to be invoked when the negative button of the dialog is pressed.
+																						Parameters:
+																							textId The resource id of the text to display in the negative button
+																								listener The DialogInterface.OnClickListener to use.
+																						Returns:
+	 																							This Builder object to allow for chaining of calls to set methods
+				 **/
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
@@ -123,15 +152,15 @@ public class SimpleDialogActivity extends Activity{
 
 
 		cancelBtn.setOnClickListener(new android.view.View.OnClickListener() {
-																/**void android.view.View.setOnClickListener(OnClickListener l)
+			/**void android.view.View.setOnClickListener(OnClickListener l)
 
 
 																	Register a callback to be invoked when this view is clicked. If this view is not clickable, it becomes 
  																			clickable.
 																							Parameters:
 																									l The callback that will run
-	
-																 				**/
+
+			 **/
 
 			@Override
 			public void onClick(View v) {
@@ -144,7 +173,7 @@ public class SimpleDialogActivity extends Activity{
 
 				AlertDialog.Builder build = new AlertDialog.Builder(SimpleDialogActivity.this);
 				build.setView(customView);
-				
+
 				okBtn = (Button)customView.findViewById(R.id.ok_btn);
 				custom_cancelBtn = (Button)customView.findViewById(R.id.custom_cancel_btn);
 
@@ -155,7 +184,7 @@ public class SimpleDialogActivity extends Activity{
 					public void onClick(View v) {
 
 						Toast.makeText(SimpleDialogActivity.this, R.string.custom_ok_msg, Toast.LENGTH_LONG).show();/**
-						
+
 																				Toast android.widget.Toast.makeText(Context context, int resId, int duration) throws 
  																								NotFoundException
 
@@ -168,7 +197,7 @@ public class SimpleDialogActivity extends Activity{
 																			duration How long to display the message. Either LENGTH_SHORT or LENGTH_LONG
 																					Throws:
 																				Resources.NotFoundException - if the resource can't be found.
-						 																	**/
+						 **/
 						alert.dismiss();
 					}
 				});
@@ -178,12 +207,33 @@ public class SimpleDialogActivity extends Activity{
 
 					public void onClick(View v) {
 						Toast.makeText(SimpleDialogActivity.this, R.string.custom_cancel_msg, Toast.LENGTH_LONG).show();
-						alert.dismiss();				
+						alert.dismiss();			/**
+																					void android.app.Dialog.dismiss()
+
+
+																					Dismiss this dialog, removing it from the screen. This method can be invoked safely from any thread. 
+ 																										Note that you should not override this method to do cleanup when the dialog is dismissed, instead 
+ 																							implement that in onStop.
+																						Specified by: dismiss() in DialogInterface
+						 ***/	
 					}
 				});
-				
-				alert=build.create();
-				alert.show();
+
+				alert=build.create();			/**AlertDialog android.app.AlertDialog.Builder.create()
+
+
+																			Creates a AlertDialog with the arguments supplied to this builder. It does not Dialog.show() the dialog. 
+																		This allows the user to do any extra processing before displaying the dialog. Use show() if you don't have 
+ 															any other processing to do and want this to be created and displayed.
+				 **/
+				alert.show();/**
+																					void android.app.Dialog.show()
+
+
+																						Start the dialog and display it on screen. The window is placed in the application layer and opaque. Note 
+ 																								that you should not override this method to do initialization when the dialog is shown, instead 
+ 																					implement that in onStart.
+				 **/
 
 			}
 

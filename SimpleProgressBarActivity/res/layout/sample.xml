@@ -7,7 +7,7 @@
      android:layout_gravity="center"
      >
     
-    <Button android:id="@+id/event_txt"
+    <Button android:id="@+id/event_btn"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:gravity="center"

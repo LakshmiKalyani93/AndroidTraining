@@ -14,7 +14,7 @@ public class SampleActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sample);
 		
-		Button eventSetBtn = (Button)findViewById(R.id.event_txt);
+		Button eventSetBtn = (Button)findViewById(R.id.event_btn);
 		
 		eventSetBtn.setOnClickListener(new OnClickListener() {
 			

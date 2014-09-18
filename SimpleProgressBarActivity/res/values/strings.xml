@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">SimpleProgressBarActivity</string>
+    <string name="event_set">Set an Event</string>
+    
+
+</resources>

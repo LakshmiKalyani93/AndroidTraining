@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">SimpleProgressBarActivity</string>
+    <string name="event_set">Set an Event</string>
+    <string name="event_des">Event Description</string>
+    <string name="stream">Enter Your Stream</string>
+    <string name="set">Set</string>
+    <string name="cancel">Cancel</string>
+    <string name="event_name">Enter Your EventName!</string>
+    
+
+</resources>

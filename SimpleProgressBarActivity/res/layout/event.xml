@@ -47,15 +47,23 @@
 
         <Button
             android:id="@+id/set_btn"
+<<<<<<< HEAD
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="@string/set" 
         
             android:layout_weight="1.0"
+=======
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/set" 
+          android:layout_weight="1.0"
+>>>>>>> 477b9950e0377973be4afb6b6b60b4a724a3ba26
           android:padding="10dp"/>
 
         <Button
             android:id="@+id/cancel_btn"
+<<<<<<< HEAD
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/set_btn"
@@ -64,6 +72,14 @@
             android:layout_weight="1.0"
           android:padding="10dp"/>
         
+=======
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/set_btn"
+            android:text="@string/cancel" 
+            android:layout_weight="1.0"
+          android:padding="10dp"/>
+>>>>>>> 477b9950e0377973be4afb6b6b60b4a724a3ba26
     </RelativeLayout>
 
 </LinearLayout>

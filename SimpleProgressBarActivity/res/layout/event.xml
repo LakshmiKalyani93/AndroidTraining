@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>   
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="4"
+     >
+    
+    <EditText
+        android:id="@+id/event_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/event_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/stream_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/stream"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/date_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/date" />
+
+    <Button
+        android:id="@+id/time_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/time" />
+    
+    <TextView android:id="@+id/result_event"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"/>
+    
+    
+    <TextView android:id="@+id/result_date"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"/>
+    
+    <TextView android:id="@+id/result_time"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"/>
+    
+
+    <RelativeLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/set_btn"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/set" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/set_btn"
+            android:padding="10dp"
+            android:text="@string/cancel" />
+    </RelativeLayout>  
+
+</LinearLayout>

@@ -2,10 +2,19 @@
 
     <string name="app_name">SimpleProgressBarActivity</string>
     <string name="event_set">Set an Event</string>
+    <string name="menu_set">Show Menu Styles</string>
     <string name="event_des">Event Description</string>
+    <string name="menu_des">MenuStyle Activity</string>
     <string name="stream">Enter Your Stream</string>
+    <string name="date">Set Date</string>
+    <string name="time">Set Time</string>
     <string name="set">Set</string>
     <string name="cancel">Cancel</string>
+      <string name="cancel_msg">You have set no event</string>
+      <string name="show_msg">Event Set is Successful</string>
+        <string name="value">Updated event is :</string>
+        <string name="null_msg">Don\'t leave any of the fields empty</string>
+         
     <string name="event_name">Enter Your EventName!</string>
     
 

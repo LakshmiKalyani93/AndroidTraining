@@ -23,6 +23,9 @@
         <activity android:name="com.pcs.simpleprogressbaractivity.EventActivity"
             android:theme="@android:style/Theme.Dialog"
             android:label="@string/event_des"></activity>
+       
+        <activity android:name="com.pcs.simpleprogressbaractivity.MenuStyleActivity"
+            android:label="@string/menu_des"></activity>
     </application>
 
 </manifest>

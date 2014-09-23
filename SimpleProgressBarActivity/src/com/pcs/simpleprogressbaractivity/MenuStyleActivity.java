@@ -26,12 +26,13 @@ public class MenuStyleActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
-
+		//getting a reference to button addContactsBtn of the layout menu
 		addContactsBtn = (Button)findViewById(R.id.add_btn);
 
+		// Getting a reference to EditText of the layout menu
 		nameEdt = (EditText)findViewById(R.id.name_edt);
 		phnEdt = (EditText)findViewById(R.id.phn_edt);
-
+		//registering the addContactBtn to the ContextMenu
 		registerForContextMenu(addContactsBtn);
 
 	}
@@ -40,7 +41,7 @@ public class MenuStyleActivity extends Activity{
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
-
+		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menustyle, menu);
 
 	}
@@ -52,10 +53,14 @@ public class MenuStyleActivity extends Activity{
 		String call = phnEdt.getText().toString();	
 		String person = nameEdt.getText().toString();	
 		
+		//validating the fields for the null values if any are present
+
 		if(TextUtils.isEmpty(person)||TextUtils.isEmpty(call))
 		{
 			Toast.makeText(this, getResources().getString(R.string.null_msg), Toast.LENGTH_LONG).show();
 		}
+		
+		//retrieves the id's for each item based on selection and performs the relavant action
 
 		switch(item.getItemId())
 		{

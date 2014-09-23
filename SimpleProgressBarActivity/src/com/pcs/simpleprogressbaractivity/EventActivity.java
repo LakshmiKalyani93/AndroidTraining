@@ -60,20 +60,22 @@ public class EventActivity extends Activity{
 
 		updateHandler = new Handler();
 
-
+		// Getting a reference to EditText of the layout event
 		eventEdt = (EditText)findViewById(R.id.event_edt);
 		streamEdt=(EditText)findViewById(R.id.stream_edt);
 
+		// Getting a reference to Button of the layout event
 		dateBtn = (Button)findViewById(R.id.date_btn);
 		timeBtn=(Button)findViewById(R.id.time_btn);
 		setBtn=(Button)findViewById(R.id.set_btn);
 		cancelBtn=(Button)findViewById(R.id.cancel_btn);
 
+		// Getting a reference to TextView of the layout event
 		resultDate=(TextView)findViewById(R.id.result_date);
 		resultTime=(TextView)findViewById(R.id.result_time);
 		resultEvent=(TextView)findViewById(R.id.result_event);
 
-
+		//creating an onClickListener to the button dateBtn
 		dateBtn.setOnClickListener(new android.view.View.OnClickListener() {
 
 			@Override
@@ -83,7 +85,11 @@ public class EventActivity extends Activity{
 				month = calender.get(Calendar.MONTH);
 				day = calender.get(Calendar.DAY_OF_MONTH);
 
+				//setting a datepicker dialog in the EventActivity 
+
 				datepicker = new DatePickerDialog(EventActivity.this, datePickerListener, year, month, day);
+
+				//enabling the datapicker dialog
 				datepicker.show();
 
 			}
@@ -118,8 +124,9 @@ public class EventActivity extends Activity{
 
 				hour = calender.get(Calendar.HOUR);
 				minute = calender.get(Calendar.MINUTE);
-
+				//setting time picker dialog in the EventActivity 
 				timepicker = new TimePickerDialog(EventActivity.this, timePickerListener, hour, minute, true);
+				//enabling the timepicker widget
 				timepicker.show();
 
 
@@ -135,6 +142,8 @@ public class EventActivity extends Activity{
 				hour = hourOfDay;
 				minute = minuteOfHour;
 
+				//setting the result time to the textview
+
 				resultTime.setText(new StringBuilder().append(hour)
 						.append(":").append(minute)
 						.append(" "));
@@ -144,6 +153,8 @@ public class EventActivity extends Activity{
 		};
 
 
+		//creating an onClickListener to the button setBtn
+
 		setBtn.setOnClickListener(new android.view.View.OnClickListener() {
 
 			@Override
@@ -151,18 +162,18 @@ public class EventActivity extends Activity{
 
 				String eventName = eventEdt.getText().toString();
 				String streamName = streamEdt.getText().toString();
-
+				//validating the fileds for null values if any resent
 				if(TextUtils.isEmpty( eventName)||TextUtils.isEmpty(streamName))
 				{
 					Toast.makeText(EventActivity.this,getResources().getString(R.string.null_msg), Toast.LENGTH_LONG).show();
 					finish();
 				}
-
+				//setting the result time value to the textview
 				resultEvent.setText(getResources().getString(R.string.value)+""+eventName+"\n"+streamName);
 
 
 
-
+				//creating a progress dialog 
 
 				progress = new ProgressDialog(EventActivity.this);
 
@@ -172,16 +183,16 @@ public class EventActivity extends Activity{
 				progress.setProgress(0);
 				progress.setMax(20);
 				progress.show();
-				
-			
+
+				//updating the progress dialog
 
 				new Thread(new Runnable() {
-					
-					
+
+
 					@Override
 					public void run() {
-						
-						
+
+
 						try {
 
 							// Here you should write your time consuming task...
@@ -196,16 +207,16 @@ public class EventActivity extends Activity{
 										progress.incrementProgressBy(2);
 
 									}
-									
-									
+
+
 
 								});
 
 								if (progress.getProgress() == progress.getMax()) {
-								
+
 									progress.dismiss();
-									
-									
+
+
 								}
 							}
 						} catch (Exception e) {
@@ -213,12 +224,12 @@ public class EventActivity extends Activity{
 					}
 
 				}).start();  
-					
+
 			}
 
 		});
 
-
+		//creating an onClickListener to the button cancelBtn
 		cancelBtn.setOnClickListener(new android.view.View.OnClickListener() {
 
 			@Override

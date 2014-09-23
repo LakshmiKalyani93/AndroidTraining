@@ -64,5 +64,11 @@ public class Contact implements Parcelable{
 		dest.writeString(name);
 		dest.writeString(number);
 	}
+	
+	public String toString() {
+		
+		return "Personname :"+ getName()+"\nPhoneNumber"+ getNumber();
+		
+	};
 
 }

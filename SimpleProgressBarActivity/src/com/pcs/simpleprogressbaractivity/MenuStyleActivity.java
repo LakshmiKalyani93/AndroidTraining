@@ -1,12 +1,12 @@
 package com.pcs.simpleprogressbaractivity;
 
-import com.pcs.constants.Constants;
-import com.pcs.contactdetails.Contact;
+
 
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuItem;
@@ -44,19 +44,25 @@ public class MenuStyleActivity extends Activity{
 		getMenuInflater().inflate(R.menu.menustyle, menu);
 
 	}
-	
-	
+
+
 
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
 		String call = phnEdt.getText().toString();	
+		String person = nameEdt.getText().toString();	
+		
+		if(TextUtils.isEmpty(person)||TextUtils.isEmpty(call))
+		{
+			Toast.makeText(this, getResources().getString(R.string.null_msg), Toast.LENGTH_LONG).show();
+		}
 
 		switch(item.getItemId())
 		{
 
 		case R.id.item_call: 
 			Intent intent = new Intent(Intent.ACTION_CALL);
-			
+
 			intent.setData(Uri.parse("tel:"+call ));
 			startActivity(intent);
 
@@ -70,15 +76,13 @@ public class MenuStyleActivity extends Activity{
 		case R.id.item_update:
 			break;
 		case R.id.item_existing:
-			Toast.makeText(this, getResources().getString(R.string.existing_msg)+"\n"+nameEdt.getText().toString()+"\n"+call, Toast.LENGTH_LONG).show();
+			Toast.makeText(this, getResources().getString(R.string.existing_msg)+"\n"+person+"\n"+call, Toast.LENGTH_LONG).show();
 			finish();
 			break;
 		case R.id.item_new:
+			Toast.makeText(this, getResources().getString(R.string.new_msg)+"\n"+person+"\n"+call, Toast.LENGTH_LONG).show();
+			finish();
 
-			Contact contact = new Contact(nameEdt.getText().toString(),phnEdt.getText().toString());
-			Intent intent_new_contact = new Intent(getBaseContext(),ContactsDisplayActivity.class);
-			intent_new_contact.putExtra(Constants.ContactExtras.CONTACT, contact);
-			startActivity(intent_new_contact);
 			break;
 		default:
 			break;

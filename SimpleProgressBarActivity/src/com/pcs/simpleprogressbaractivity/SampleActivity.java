@@ -3,9 +3,12 @@ package com.pcs.simpleprogressbaractivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class SampleActivity extends Activity{
 
@@ -41,7 +44,44 @@ public class SampleActivity extends Activity{
 
 			}
 		});
-
+		
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.optionmenu, menu);//Menu Resource, Menu  
+        return true;  
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		switch(item.getItemId()){
+		case R.id.profile: Toast.makeText(this,getResources().getString(R.string.display_msg)+" "+getResources().getString(R.string.profile), Toast.LENGTH_LONG).show();
+		
+			break;
+		case R.id.bluetooth:Toast.makeText(this,getResources().getString(R.string.display_msg)+" "+getResources().getString(R.string.bluetooth), Toast.LENGTH_LONG).show();
+		
+			break;
+		case R.id.wifi:Toast.makeText(this,getResources().getString(R.string.display_msg)+" "+getResources().getString(R.string.wifi), Toast.LENGTH_LONG).show();
+		
+			break;
+		case R.id.data_pack:Toast.makeText(this,getResources().getString(R.string.display_msg)+" "+getResources().getString(R.string.data_pack), Toast.LENGTH_LONG).show();
+	
+			break;
+		case R.id.gps:Toast.makeText(this,getResources().getString(R.string.display_msg)+" "+getResources().getString(R.string.gps), Toast.LENGTH_LONG).show();
+	
+			break;
+		case R.id.baterry:Toast.makeText(this,getResources().getString(R.string.display_msg)+" "+getResources().getString(R.string.baterry), Toast.LENGTH_LONG).show();
+		
+			break;
+			default:
+			break;
+			
+		}
+		
+		
+		return super.onOptionsItemSelected(item);
 	}
 
 }

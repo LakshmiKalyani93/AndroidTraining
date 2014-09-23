@@ -30,8 +30,7 @@
             android:label="@string/menu_des"
             android:theme="@android:style/Theme.Dialog"></activity>
         
-        <activity android:name="com.pcs.simpleprogressbaractivity.ContactsDisplayActivity"
-            android:label="@string/contacts_label"></activity>
+
     </application>
 
 </manifest>

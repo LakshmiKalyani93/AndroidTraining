@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/item1"
+        android:id="@+id/item_call"
         android:title="@string/call"/>
     <item
-        android:id="@+id/item2"
+        android:id="@+id/item_sms"
         android:title="@string/sms"/>
     <item
-        android:id="@+id/item3"
+        android:id="@+id/item_update"
         android:title="@string/update_contacts">
         <group>
             <menu>
                 <item
-                    android:id="@+id/item31"
+                    android:id="@+id/item_new"
                     android:title="@string/new_contacts"/>
                 <item
-                    android:id="@+id/item32"
+                    android:id="@+id/item_existing"
                     android:title="@string/existing_contacts"/>
             </menu>
         </group>

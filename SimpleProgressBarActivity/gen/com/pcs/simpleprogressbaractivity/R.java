@@ -17,57 +17,64 @@ public final class R {
         public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
-        public static final int add_btn=0x7f07000c;
-        public static final int cancel_btn=0x7f070009;
-        public static final int date_btn=0x7f070002;
-        public static final int event_btn=0x7f07000d;
-        public static final int event_edt=0x7f070000;
-        public static final int item1=0x7f07000f;
-        public static final int item2=0x7f070010;
-        public static final int item3=0x7f070011;
-        public static final int item31=0x7f070012;
-        public static final int item32=0x7f070013;
-        public static final int layout_btn=0x7f070007;
-        public static final int menu_btn=0x7f07000e;
-        public static final int name_edt=0x7f07000a;
-        public static final int phn_edt=0x7f07000b;
-        public static final int result_date=0x7f070005;
-        public static final int result_event=0x7f070004;
-        public static final int result_time=0x7f070006;
-        public static final int set_btn=0x7f070008;
-        public static final int stream_edt=0x7f070001;
-        public static final int time_btn=0x7f070003;
+        public static final int add_btn=0x7f07000d;
+        public static final int cancel_btn=0x7f07000a;
+        public static final int contacts_list=0x7f070000;
+        public static final int date_btn=0x7f070003;
+        public static final int event_btn=0x7f07000e;
+        public static final int event_edt=0x7f070001;
+        public static final int item_call=0x7f070010;
+        public static final int item_existing=0x7f070014;
+        public static final int item_new=0x7f070013;
+        public static final int item_sms=0x7f070011;
+        public static final int item_update=0x7f070012;
+        public static final int layout_btn=0x7f070008;
+        public static final int menu_btn=0x7f07000f;
+        public static final int name_edt=0x7f07000b;
+        public static final int phn_edt=0x7f07000c;
+        public static final int result_date=0x7f070006;
+        public static final int result_event=0x7f070005;
+        public static final int result_time=0x7f070007;
+        public static final int set_btn=0x7f070009;
+        public static final int stream_edt=0x7f070002;
+        public static final int time_btn=0x7f070004;
     }
     public static final class layout {
-        public static final int event=0x7f030000;
-        public static final int menu=0x7f030001;
-        public static final int sample=0x7f030002;
+        public static final int display=0x7f030000;
+        public static final int event=0x7f030001;
+        public static final int menu=0x7f030002;
+        public static final int sample=0x7f030003;
     }
     public static final class menu {
         public static final int menustyle=0x7f060000;
     }
     public static final class string {
-        public static final int add_contacts=0x7f040010;
+        public static final int add_contacts=0x7f040012;
         public static final int app_name=0x7f040000;
-        public static final int call=0x7f040012;
-        public static final int cancel=0x7f040009;
-        public static final int cancel_msg=0x7f04000a;
-        public static final int date=0x7f040006;
+        public static final int call=0x7f040016;
+        public static final int calling=0x7f040017;
+        public static final int cancel=0x7f04000b;
+        public static final int cancel_msg=0x7f04000c;
+        public static final int contacts_label=0x7f040004;
+        public static final int date=0x7f040008;
         public static final int event_des=0x7f040003;
-        public static final int event_name=0x7f040014;
+        public static final int event_name=0x7f040019;
         public static final int event_set=0x7f040001;
-        public static final int menu_des=0x7f040004;
+        public static final int existing_contacts=0x7f040014;
+        public static final int existing_msg=0x7f040005;
+        public static final int menu_des=0x7f040006;
         public static final int menu_set=0x7f040002;
-        public static final int name_hint=0x7f04000e;
-        public static final int null_msg=0x7f04000d;
-        public static final int phn_hint=0x7f04000f;
-        public static final int set=0x7f040008;
-        public static final int show_msg=0x7f04000b;
-        public static final int sms=0x7f040013;
-        public static final int stream=0x7f040005;
-        public static final int time=0x7f040007;
-        public static final int update_contacts=0x7f040011;
-        public static final int value=0x7f04000c;
+        public static final int name_hint=0x7f040010;
+        public static final int new_contacts=0x7f040015;
+        public static final int null_msg=0x7f04000f;
+        public static final int phn_hint=0x7f040011;
+        public static final int set=0x7f04000a;
+        public static final int show_msg=0x7f04000d;
+        public static final int sms=0x7f040018;
+        public static final int stream=0x7f040007;
+        public static final int time=0x7f040009;
+        public static final int update_contacts=0x7f040013;
+        public static final int value=0x7f04000e;
     }
     public static final class style {
         /** 

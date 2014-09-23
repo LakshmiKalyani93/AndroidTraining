@@ -4,6 +4,8 @@
     <string name="event_set">Set an Event</string>
     <string name="menu_set">Show Menu Styles</string>
     <string name="event_des">Event Description</string>
+    <string name="contacts_label">Contacts Activity</string>
+    <string name="existing_msg">Your contact list has been updated</string>
     <string name="menu_des">MenuStyle Activity</string>
     <string name="stream">Enter Your Stream</string>
     <string name="date">Set Date</string>
@@ -21,6 +23,7 @@
     <string name="existing_contacts">To Existing Contacts</string>
     <string name="new_contacts">Add New Contact</string>
     <string name="call">Call</string>
+      <string name="calling">Calling....</string>
     <string name="sms">SMS</string>
     <string name="event_name">Enter Your EventName!</string>
 

@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">JsonDownloader</string>
+    <string name="download">Download</string>
+    <string name="msg">Download is in progress....</string>
+   
+
+</resources>

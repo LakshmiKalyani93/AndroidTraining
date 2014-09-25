@@ -11,10 +11,12 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int gradient=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
         public static final int data2_txt=0x7f060002;
+        public static final int data3_txt=0x7f060003;
         public static final int data_txt=0x7f060001;
         public static final int json_btn=0x7f060000;
     }

@@ -47,18 +47,21 @@ public class JsonActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.json);
 
-
+//fetching reference for TextViews of the layout json
 		msgTxt = (TextView)findViewById(R.id.data_txt);
 		codeTxt = (TextView)findViewById(R.id.data2_txt);
 		validTxt = (TextView)findViewById(R.id.data3_txt);
-
+		
+//fetching reference Button of the layout json
 		downloadBtn = (Button)findViewById(R.id.json_btn);
 
+		//setting a listener to the button downloadBtn
 		downloadBtn.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
 
+				//call to a inner class JsonDownloader
 				new JsonDownloader(JsonActivity.this).execute();
 
 			}
@@ -76,7 +79,7 @@ public class JsonActivity extends Activity{
 			mContext = context;
 		}
 
-
+//creating a progress dialog in onPreExecute()
 		protected void onPreExecute() {
 
 			super.onPreExecute();
@@ -89,39 +92,48 @@ public class JsonActivity extends Activity{
 
 		}
 
+		
+		//In this method we are trying to grab a Json object 
 		@Override
 		protected String doInBackground(Void... params) {
 
 			String line = null;
-
+			URL url=null;
 			try {
-				URL url = new URL("http://validate.jsontest.com/?json=%7B%22key%22:%22value%22%7D");
-				URLConnection con = url.openConnection();
+				
+				//specifying the URL where json object is present
+				 url = new URL("http://validate.jsontest.com/?json=%7B%22key%22:%22value%22%7D");
+				
+				 //opening the connection for the URL as mentioned above
+				 URLConnection con = url.openConnection();
+				 //connecting to the URL
 				con.connect();
 
+				//Here,we are using Input Stream ,InputStreamReader,BufferedReader to store the input coming from the result
 				InputStream is = con.getInputStream();
 				InputStreamReader isr = new InputStreamReader(is);
 				BufferedReader br = new BufferedReader(isr);
 
 				sb = new StringBuilder();
-
+//reading line by line and checking for the null values as well
 				while((line=br.readLine())!=null)
 				{
+					//updating the progress
 					dialog.setProgress(60);
 					sb.append(line);
 
 				}
-
+				//printing the response in the LOG
 				Log.i(TAG, "Response ="+sb.toString());
 
-			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
+			}
+			//Handling the exceptions
+			catch (MalformedURLException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
+//checking out whether the response is null if so returning null so that application shouldn't crash
 			if(sb!=null)
 			{
 				return sb.toString();
@@ -132,7 +144,7 @@ public class JsonActivity extends Activity{
 			}
 		}
 
-
+//setting the progress
 		@Override
 		protected void onProgressUpdate(Integer... values) {
 			super.onProgressUpdate(values);
@@ -140,22 +152,25 @@ public class JsonActivity extends Activity{
 			dialog.setProgress(values[0]);
 		}
 
+		
+		
 		@Override
 		protected void onPostExecute(String result) {
 			super.onPostExecute(result);
 
 
 			dialog.dismiss();
-
+// Handling the exception if the response is null and parsing the text from that json object
 			if(result!=null)
 			{
 				try
 				{
 
-
+					//creating th ejson object
 
 					JSONObject obj =new JSONObject(result) ;
 
+					//checking for json keys and displaying the values if any 
 					if (obj.has("object_or_array"))
 					{
 
@@ -180,6 +195,7 @@ public class JsonActivity extends Activity{
 			}
 			else
 			{
+				//if the response is null then we are showing the Toast msg
 				Toast.makeText(JsonActivity.this,getResources().getString(R.string.app_name), Toast.LENGTH_LONG).show();
 			}
 		}

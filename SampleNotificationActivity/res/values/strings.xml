@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">SampleNotificationActivity</string>
+    <string name="broadcast">Broadcast Receiver</string>
+    <string name="notify">Alert Notification</string>
+    <string name="local">Local Broadcast</string>
+    <string name="broadcast_msg">Broadcast Intent Detected.</string>
+    <string name="intent_null">NO intent received.</string>
+     <string name="local_broadcast">Activate Local Broadcast</string>
+    <string name="msg">Hello Kalyani!</string>
+    <string name="title">Message:</string>
+
+</resources>

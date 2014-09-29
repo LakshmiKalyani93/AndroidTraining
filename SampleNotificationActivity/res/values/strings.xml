@@ -5,8 +5,10 @@
     <string name="notify">Alert Notification</string>
     <string name="local">Local Broadcast</string>
     <string name="broadcast_msg">Broadcast Intent Detected.</string>
-    <string name="intent_null">NO intent received.</string>
+    <string name="broadcast_intent_null">NO broadcast intent is received.</string>
      <string name="local_broadcast">Activate Local Broadcast</string>
+      <string name="local_broadcast_msg"> Local Broadcast Broadcast Intent Detected.</string>
+      <string name="no_local_intent">NO local is detected.</string>
     <string name="msg">Hello Kalyani!</string>
     <string name="title">Message:</string>
 

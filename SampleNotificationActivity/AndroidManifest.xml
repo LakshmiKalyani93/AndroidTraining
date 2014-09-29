@@ -24,7 +24,8 @@
         <activity android:name="com.pcs.samplenotificationactivity.LocalBroadcastActivity"
             android:label="@string/local"/>
         
-        <receiver android:name="com.pcs.samplenotificationactivity.SampleBroadcast">
+        <receiver android:name="com.pcs.samplenotificationactivity.SampleBroadcast"
+            android:exported="false">
             <intent-filter >
                 <action android:name="com.pcs.SEND_BROADCAST_MSG"/>
                 

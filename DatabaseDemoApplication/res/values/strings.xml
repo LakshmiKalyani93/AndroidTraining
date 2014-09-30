@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">DatabaseDemoApplication</string>
+    <string name="dbDetails">DatabaseDetails</string>
+    <string name="user_hint">Enter UserName ! </string>
+    <string name="pwd_hint">Enter Password !</string>
+    <string name="email_hint">Enter Email ID !</string>
+     <string name="login">Login</string>
+      <string name="null_msg">Don\'t leave any fields empty</string>
+     <string name="newUser">New User?</string>
+      <string name="cancel">Cancel</string>
+
+</resources>

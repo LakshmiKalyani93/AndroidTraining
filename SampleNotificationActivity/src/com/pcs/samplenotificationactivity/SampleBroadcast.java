@@ -14,9 +14,9 @@ public class SampleBroadcast extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-//checking out if any null value is present
+		//checking out if any null value is present
 		if (intent != null) {
-//fetching the actions thats are available from the broadcast 
+			//fetching the actions thats are available from the broadcast 
 			if (intent.getAction().equals("com.pcs.SEND_BROADCAST_MSG"))
 
 			{
@@ -24,7 +24,7 @@ public class SampleBroadcast extends BroadcastReceiver {
 				Toast.makeText(
 						context,
 						context.getResources()
-								.getString(R.string.broadcast_msg),
+						.getString(R.string.broadcast_msg),
 						Toast.LENGTH_LONG).show();
 			} 
 			else if (intent.getAction().equals("com.pcs.SEND_NOTIFICATION"))
@@ -34,9 +34,9 @@ public class SampleBroadcast extends BroadcastReceiver {
 				NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(
 						context);
 				mBuilder.setSmallIcon(R.drawable.notify)
-						.setContentTitle(
-								context.getResources()
-										.getString(R.string.title))
+				.setContentTitle(
+						context.getResources()
+						.getString(R.string.title))
 						.setContentText(
 								context.getResources().getString(R.string.msg));
 
@@ -69,7 +69,7 @@ public class SampleBroadcast extends BroadcastReceiver {
 
 				mBuilder.setAutoCancel(true);
 				mBuilder.setContentIntent(pending_intent);
-				
+
 				// Notifications are issued by sending them to the
 				// NotificationManager system service.
 
@@ -80,7 +80,7 @@ public class SampleBroadcast extends BroadcastReceiver {
 				// passes it to the NotificationManager
 
 				mNotificationManager.notify(0, mBuilder.build());	
-				
+
 			}
 			else
 			{

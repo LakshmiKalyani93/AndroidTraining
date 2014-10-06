@@ -8,6 +8,7 @@
      <string name="login">Login</string>
       <string name="null_msg">Don\'t leave any fields empty</string>
           <string name="row_insert_msg">Row inserted successfully</string>
+          <string name="register">Visit Resgistration Page</string>
      <string name="newUser">New User?</string>
       <string name="cancel">Cancel</string>
       <string name="alluser">All Users</string>

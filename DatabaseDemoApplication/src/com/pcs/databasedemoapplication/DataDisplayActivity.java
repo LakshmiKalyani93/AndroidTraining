@@ -25,35 +25,27 @@ public class DataDisplayActivity extends Activity{
 
 		listView = (ListView)findViewById(R.id.listview);
 		
-		if(getIntent()!=null)
-		{
+		
 		ArrayList<PersonDetails> personList = new ArrayList<PersonDetails>();
-		CustomListAdapter adapter = new CustomListAdapter(DataDisplayActivity.this, personList);
 		PersonDetails person = new PersonDetails(getBaseContext());
+		
 		DBHelper db=new DBHelper(DataDisplayActivity.this);
 		SQLiteDatabase sqlitedb=db.getReadableDatabase();
 
 		Cursor mCursor =sqlitedb.rawQuery("select * from  "+PersonDetailsContrast.TABLE_NAME, null);
-
+		
 		if(mCursor.moveToFirst())
 		{
 			do{
-				person.setUserName(getString((mCursor.getColumnIndex(PersonDetailsContrast.PERSON_NAME))));
-				person.setEmail(getString((mCursor.getColumnIndex(PersonDetailsContrast.PERSON_EMAIL))));
-				person.setPassword(getString((mCursor.getColumnIndex(PersonDetailsContrast.PERSON_PASSWORD))));
-				
-				personList.add(person);
+				person.setUserName(mCursor.getString((mCursor.getColumnIndex(PersonDetailsContrast.PERSON_NAME))));
+				person.setEmail(mCursor.getString((mCursor.getColumnIndex(PersonDetailsContrast.PERSON_EMAIL))));
+				person.setPassword(mCursor.getString((mCursor.getColumnIndex(PersonDetailsContrast.PERSON_PASSWORD))));
+				personList.add(person);	
 				
 			}while(mCursor.moveToNext());
-		}
-		
-		listView.setAdapter(adapter);
-		}
-		else
-		{
-			Toast.makeText(getBaseContext(), "No intent detected", Toast.LENGTH_LONG).show();
-		}
-
+			CustomListAdapter adapter = new CustomListAdapter(DataDisplayActivity.this, personList);
+			listView.setAdapter(adapter);	
+		}	
 	}
 		
 }

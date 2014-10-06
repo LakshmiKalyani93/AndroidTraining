@@ -84,7 +84,7 @@ public class DatabaseActivity extends Activity implements OnClickListener{
 
 
 		case R.id.newUser_btn: 
-
+			Toast.makeText(DatabaseActivity.this, getResources().getString(R.string.register), Toast.LENGTH_LONG).show();
 			break;
 
 		case R.id.allusers_btn:

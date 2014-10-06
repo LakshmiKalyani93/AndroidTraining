@@ -36,16 +36,17 @@ public final class R {
         public static final int datadisplay=0x7f030002;
     }
     public static final class string {
-        public static final int alluser=0x7f04000a;
+        public static final int alluser=0x7f04000b;
         public static final int app_name=0x7f040000;
-        public static final int cancel=0x7f040009;
+        public static final int cancel=0x7f04000a;
         public static final int dbDetails=0x7f040001;
-        public static final int displayActivity=0x7f04000b;
+        public static final int displayActivity=0x7f04000c;
         public static final int email_hint=0x7f040004;
         public static final int login=0x7f040005;
-        public static final int newUser=0x7f040008;
+        public static final int newUser=0x7f040009;
         public static final int null_msg=0x7f040006;
         public static final int pwd_hint=0x7f040003;
+        public static final int register=0x7f040008;
         public static final int row_insert_msg=0x7f040007;
         public static final int user_hint=0x7f040002;
     }

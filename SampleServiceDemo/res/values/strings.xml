@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">SampleServiceDemo</string>
+    <string name="start">Start Service</string>
+    <string name="stop">Stop Service</string>
+    <string name="show">Show Time</string>
+    <string name="korean">Korean Time is: </string>
+    <string name="time">Current Time Retrieved :</string>
+    <string name="display_hint">Dispaly Korean Time !</string>
+    <string name="info">Activate Service :</string>
+    <string name="create_msg">Service Created</string>
+    <string name="start_msg">Service Started....</string>
+    <string name="stop_msg">Service Stopped</string>
+     <string name="broadcast_msg">Service Broadcast is received.</string>
+
+</resources>

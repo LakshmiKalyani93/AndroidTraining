@@ -1,5 +1,7 @@
 package com.pcs.model;
 
+import android.content.Context;
+
 
 public class PersonDetails  {
 	
@@ -7,6 +9,8 @@ public class PersonDetails  {
 	private String Email;
 	private String Password;
 	
+	public PersonDetails(Context context) {
+	}
 	public String getUserName() {
 		return UserName;
 	}
@@ -25,9 +29,5 @@ public class PersonDetails  {
 	public void setPassword(String password) {
 		Password = password;
 	}
-	
-	
-	
-
 	
 }

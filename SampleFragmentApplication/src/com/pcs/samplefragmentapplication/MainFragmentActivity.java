@@ -124,7 +124,7 @@ public class MainFragmentActivity extends FragmentActivity{
 				git_webVw.setVisibility(View.GONE);
 				android_imgVw.setVisibility(View.GONE);
 				sports_imgVw.setBackgroundResource(R.drawable.sports_img);
-				android_imgVw.setVisibility(View.GONE);
+				sports_imgVw.setVisibility(View.VISIBLE);
 				break;
 				default:
 					break;

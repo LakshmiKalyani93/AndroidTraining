@@ -27,25 +27,23 @@ public class DataDisplayActivity extends Activity{
 		
 		
 		ArrayList<PersonDetails> personList = new ArrayList<PersonDetails>();
-		PersonDetails person = new PersonDetails(getBaseContext());
-		
 		DBHelper db=new DBHelper(DataDisplayActivity.this);
 		SQLiteDatabase sqlitedb=db.getReadableDatabase();
-
 		Cursor mCursor =sqlitedb.rawQuery("select * from  "+PersonDetailsContrast.TABLE_NAME, null);
+		CustomListAdapter adapter = new CustomListAdapter(DataDisplayActivity.this, personList);
 		
 		if(mCursor.moveToFirst())
 		{
 			do{
+				PersonDetails person = new PersonDetails(getBaseContext());
 				person.setUserName(mCursor.getString((mCursor.getColumnIndex(PersonDetailsContrast.PERSON_NAME))));
 				person.setEmail(mCursor.getString((mCursor.getColumnIndex(PersonDetailsContrast.PERSON_EMAIL))));
 				person.setPassword(mCursor.getString((mCursor.getColumnIndex(PersonDetailsContrast.PERSON_PASSWORD))));
-				personList.add(person);	
-				
-			}while(mCursor.moveToNext());
-			CustomListAdapter adapter = new CustomListAdapter(DataDisplayActivity.this, personList);
-			listView.setAdapter(adapter);	
-		}	
+				personList.add(person);
+					
+			}while(mCursor.moveToNext());	
+		}
+		listView.setAdapter(adapter);	
 	}
 		
 }

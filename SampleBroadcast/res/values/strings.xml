@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">SampleBroadcast</string>
+    <string name="broadcast_msg">Broadacst intent is Received</string>
+    <string name="send">Send Broadcast </string>
+
+</resources>

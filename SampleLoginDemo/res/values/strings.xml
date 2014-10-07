@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="app_name">SampleLoginDemo</string>
+    <string name="title">PCS Business Cloud</string>
+    <string name="subtitle">Log in to Paradigm Creatives Business Cloud</string>
+    <string name="user">UserName</string>
+    <string name="login">Log In</string>
+     <string name="email_hint">Email</string>
+      <string name="pwd_hint">Password</string>
+    <string name="pwd">Password</string>
+    <string name="city_hint">Enter City Name!</string>
+    <string name="city">City </string>
+    <string name="temp">Temparature : </string>
+    <string name="humidity">Humidity</string>
+    <string name="temp_min">Min Temp : </string>
+    <string name="temp_max">Max  Temp : </string>
+    <string name="forget">Forget Password?</string>
+    <string name="weather">Weather Details Displayed Here</string>
+    <string name="getdetail">Get weather Details</string>
+    <string name="send_request">Sending request to the api.....</string>
+    <string name="no_response">No Resonse Received.</string>
+
+</resources>

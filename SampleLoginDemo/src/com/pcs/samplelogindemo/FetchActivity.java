@@ -132,11 +132,12 @@ public class FetchActivity extends Activity{
 		protected void onPostExecute(String result) {
 			String val = null;
 
-			cityTxt.setText(getResources().getString(R.string.city)+"\t\t\t\t:\t\t\t\t\t"+city);
+			
 			if(result!=null)
 			{
 			try {
 				JSONObject jsonObj = new JSONObject(result);
+				
 				if(jsonObj.has("main"))
 				{
 					JSONObject jsonObj_inner =jsonObj.getJSONObject("main");
@@ -162,6 +163,10 @@ public class FetchActivity extends Activity{
 						maxTempTxt.setText(getResources().getString(R.string.temp_max)+"\t"+ val);
 					}
 
+				}
+				if(jsonObj.has("name")){
+					val = jsonObj.getString("name");
+					cityTxt.setText(getResources().getString(R.string.city)+"\t\t\t\t\t\t\t\t:\t"+city);
 				}
 
 			} catch (JSONException e) {

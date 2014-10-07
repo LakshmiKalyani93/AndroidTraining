@@ -11,13 +11,13 @@ import android.widget.EditText;
 import com.pcs.employdetails.Employ;
 import com.pcs.helper.Helper;
 
-public class EmployeeDetails extends Activity {
-	private Button submitBtn;
 
+public class EmployeeDetails extends Activity {
+
+	private Button submitBtn;
 	private EditText nameEdt;
 	private EditText idEdt;
 	private EditText designEdt;
-
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

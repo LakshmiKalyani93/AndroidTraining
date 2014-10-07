@@ -2,6 +2,7 @@ package com.pcs.employdetails;
 
 
 import android.os.Parcel;
+
 import android.os.Parcelable;
 
 public class Employ implements Parcelable{
@@ -9,9 +10,12 @@ public class Employ implements Parcelable{
 	public String employID;
 	public String designation;
 
+	
+
 	public Employ() {
 
 	}
+
 
 	public String getEmployName() {
 		return employName;
@@ -42,6 +46,8 @@ public class Employ implements Parcelable{
 		setEmployID(source.readString());
 		setDesignation(source.readString());
 	}
+
+	
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 
@@ -51,13 +57,16 @@ public class Employ implements Parcelable{
 
 	}
 
+	
+
 	public static final Creator<Employ> CREATOR = new Creator<Employ>(){
 
+		
 		@Override
 		public Employ createFromParcel(Parcel source) {
 			return new Employ(source);
 		}
-
+		
 		@Override
 		public Employ[] newArray(int size) {
 			return new Employ[size];
@@ -65,6 +74,7 @@ public class Employ implements Parcelable{
 
 	};
 
+	
 	public String toString() {
 
 		return "Username :"+ getEmployName()+"\nEmploy ID :"+ getEmployID()+"\nDesignation :"+getDesignation();

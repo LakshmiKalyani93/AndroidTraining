@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">ParcelableDemo</string>
+    <string name="name_hint">Enter Employee Name!</string>
+    <string name="id_hint">Enter Employee ID!</string>
+    <string name="desg_hint">Enter Employee Designation!</string>
+    <string name="submit">Submit</string>
+
+</resources>

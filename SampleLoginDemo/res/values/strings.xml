@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">SampleLoginDemo</string>
+    <string name="email_hint">Email</string>
+    <string name="login">Log In</string>
+    <string name="sync">Synchronoss </string>
+    <string name="space">Workspace</string>
+        <string name="username">Username :</string>
+        <string name="null_msg">Don\'t leave any of  the fields empty</string>
+     <string name="match_msg">Email : pcs@paradigmcreatives.com and Password : pcs@123 should match as this.</string>
+      <string name="forget">Forgot Password?</string>
+    <string name="pwd_hint">Password</string>
+
+</resources>

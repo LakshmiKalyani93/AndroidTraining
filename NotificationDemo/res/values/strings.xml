@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">NotificationDemo</string>
+    <string name="title">New Message</string>
+
+    <string name="broadcast_msg">Broadcast intent is received</string>
+        <string name="msg">Hello Kalyani.How are you?</string>
+    
+<string-array name="values">
+        <item>Hello Kalyani.</item>
+        <item>How are you?</item>
+        <item>Have You gone to the office today?</item>
+        <item>Is everyone good?</item>
+        <item>I just reached home.</item>
+        <item>Catch you later</item>
+    </string-array>  
+
+</resources>

@@ -44,7 +44,7 @@ public class ServiceDemoActivity extends Activity implements OnClickListener {
 
 		Intent intent = new Intent(ServiceDemoActivity.this,MyService.class);
 		bindService(intent, connect, Context.BIND_AUTO_CREATE);
-
+			
 	}
 	@Override
 	public void onClick(View v) {

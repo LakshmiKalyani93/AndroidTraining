@@ -11,6 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
 	private SQLiteDatabase sqlitedb;
+	
 	public DBHelper(Context context) {
 		super(context, PersonDetailsContrast.DATABASE_NAME, null,
 				PersonDetailsContrast.VERSION);

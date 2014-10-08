@@ -51,7 +51,8 @@
          android:textStyle="bold"
          android:textColor="#0041C2"
          android:layout_marginTop="70dp"
-         android:layout_marginLeft="50dp"/>
+         android:layout_marginLeft="50dp"
+        />
     
     <EditText android:id="@+id/display_edt"
          android:layout_height="wrap_content"

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2" >
+
+    <TextView
+        android:id="@+id/img_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/dbDetails"
+        android:background="@drawable/images" 
+        android:layout_weight="1" 
+       />
+
+    <RelativeLayout
+        android:id="@+id/custom_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+       >
+
+        <TextView
+            android:id="@+id/name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/email_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_txt"
+            android:padding="5dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/phoneType_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_txt"
+            android:padding="5dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/phone_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneType_txt"
+            android:padding="5dp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

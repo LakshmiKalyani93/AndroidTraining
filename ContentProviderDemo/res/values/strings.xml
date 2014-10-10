@@ -2,12 +2,13 @@
 
     <string name="app_name">ContentProviderDemo</string>
     <string name="name_hint">Enter Employee Name!</string>
-    <string name="mail_hint">Enter Email</string>
-    <string name="type_hint">Enter Home/Office</string>
-    <string name="number_hint">Enter Number</string>
+    <string name="mail_hint">Enter Email!</string>
+    <string name="type_hint">Enter Home/Office!</string>
+    <string name="number_hint">Enter Number!</string>
     <string name="addContact">Add Contact</string>
     <string name="showContacts">Show Contacts</string>
     <string name="add_msg">New Contact Record Inserted</string>
+    <string name="null_msg">Dont\'t leave any fields empty</string>
     
 
 </resources>

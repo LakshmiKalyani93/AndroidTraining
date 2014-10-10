@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">RetrieveContactsDemo</string>
+    <string name="deleteContacts">Delete Contacts</string>
+    <string name="dbDetails">ContactsDB</string>
+    <string name="delete_msg">Records Deleted Successfully</string>
+
+</resources>

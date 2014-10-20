@@ -5,21 +5,10 @@
     android:orientation="vertical" 
     android:weightSum="2"
     android:background="@color/light_blue">
+   
+    <WebView android:layout_height="match_parent"
+       android:layout_width="match_parent"
+       android:id="@+id/web_View"/>
     
-    <ImageView android:layout_height="250dp"
-       android:layout_width="wrap_content"
-       android:src="@drawable/appstore_img"
-       android:layout_marginTop="40dp"
-       android:layout_weight="1"/>
-    
-     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/google_play"
-        android:textStyle="bold"
-        android:layout_gravity="center" 
-        android:padding="10dp"
-         android:textSize="20sp"
-         android:layout_weight="1"/>
 
 </LinearLayout>

@@ -2,42 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-   >
-    
-    <EditText android:id="@+id/user_edt"
-        android:layout_height="wrap_content"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:inputType="text"
-        android:hint="@string/user_hint"/>
-   
-    
-     <EditText android:id="@+id/pwd_edt"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/title"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/user_edt"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_hint"
         android:inputType="text"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/pwd_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="@string/pwd_hint"
-        android:password="true"/>
-     
-     <RelativeLayout android:id="@+id/rel_layout"
-         android:layout_height="wrap_content"
-         android:layout_width="match_parent"
-         >
-    
-    <Button android:id="@+id/login_btn"
-        android:layout_height="wrap_content"
+        android:inputType="text"
+  
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/login_btn"
         android:layout_width="wrap_content"
-        android:text="@string/login"
-        android:layout_marginLeft="50dp"
-        android:padding="20dp"/>
-    
-    <Button android:id="@+id/cancel_btn"
-        android:layout_toRightOf="@id/login_btn"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/cancel"
-        android:layout_marginLeft="50dp"
-        android:padding="20dp"/>
-    </RelativeLayout>
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:text="@string/login" />
 
 </LinearLayout>

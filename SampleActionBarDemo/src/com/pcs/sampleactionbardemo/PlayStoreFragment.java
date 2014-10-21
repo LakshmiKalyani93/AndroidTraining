@@ -22,7 +22,7 @@ public class PlayStoreFragment extends Fragment{
 		webView.setWebViewClient(browse_googleplay);
 		webView.getSettings().setJavaScriptEnabled(true);
 		webView.loadUrl("http://play.google.com/store");
-		
+
 		return rootView;
 
 	}

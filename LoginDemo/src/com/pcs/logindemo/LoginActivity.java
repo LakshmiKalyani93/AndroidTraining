@@ -1,6 +1,8 @@
 package com.pcs.logindemo;
 
 
+import com.pcs.constants.Constants;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +14,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 	private EditText userEdt;
 	private EditText pwdEdt;
 	private Button login_Btn;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -22,7 +24,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 		login_Btn=(Button)findViewById(R.id.login_btn);
 
 		login_Btn.setOnClickListener(this);	
-		
+
 	}
 	@Override
 	public void onClick(View v) {
@@ -33,13 +35,27 @@ public class LoginActivity extends Activity implements OnClickListener{
 		String username=userEdt.getText().toString();
 		String password=pwdEdt.getText().toString();
 
-		if(!(username.equals("") || password.equals(""))) {
-			Toast.makeText(this, "Logged in successfully", Toast.LENGTH_LONG).show();
+		if(username.equals(Constants.KeyExtras.USERNAME) && password.equals(Constants.KeyExtras.PASSWORD)) {
+			Toast.makeText(this, getResources().getString(R.string.sucess), Toast.LENGTH_LONG).show();
 		}
-		else {
-			Toast.makeText(this, "Failed to login", Toast.LENGTH_LONG).show();
+		else if(username.equals(Constants.KeyExtras.USERNAME) && password.equals("")) {
+			Toast.makeText(this, getResources().getString(R.string.pwd_null), Toast.LENGTH_LONG).show();
 
-		}		
+		}
+		else if(username.equals("") && password.equals(Constants.KeyExtras.PASSWORD))
+		{
+			Toast.makeText(this, getResources().getString(R.string.user_null), Toast.LENGTH_LONG).show();
+		}
+		else if(username.equals(Constants.KeyExtras.USER_INVALID) && password.equals(Constants.KeyExtras.PASSWORD)){
+			Toast.makeText(this, getResources().getString(R.string.invalid_user), Toast.LENGTH_LONG).show();
+		}
+		else if(username.equals(Constants.KeyExtras.USERNAME) && password.equals(Constants.KeyExtras.PWD_INVALID)){
+			Toast.makeText(this,getResources().getString(R.string.invalid_pwd), Toast.LENGTH_LONG).show();
+		}
+		else
+		{
+			Toast.makeText(this, "Both fields null, Failed to login", Toast.LENGTH_LONG).show();
+		}
 	}
 
 

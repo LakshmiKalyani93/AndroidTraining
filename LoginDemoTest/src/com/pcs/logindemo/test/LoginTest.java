@@ -5,13 +5,12 @@ import android.test.TouchUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.pcs.constants.Constants;
 import com.pcs.logindemo.LoginActivity;
 
 public class LoginTest extends ActivityInstrumentationTestCase2<LoginActivity>{
 
-	private static final String USERNAME = "kalyani";
-	private static final String PASSWORD = "kalyani123";
-
+	
 	private LoginActivity activity;
 
 	private EditText uservalueEdt;
@@ -44,12 +43,56 @@ public class LoginTest extends ActivityInstrumentationTestCase2<LoginActivity>{
 	}
 	public void test_login() {
 		TouchUtils.tapView(this, uservalueEdt);
-		getInstrumentation().sendStringSync(USERNAME);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
 
 		TouchUtils.tapView(this, pwdvalueEdt);
-		getInstrumentation().sendStringSync(PASSWORD);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
 
 		TouchUtils.clickView(this, login_Btn);
+	}
+	public void test_userNull() {
+		TouchUtils.tapView(this, uservalueEdt);
+		getInstrumentation().sendStringSync("");
 
-}
+		TouchUtils.tapView(this, pwdvalueEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
+
+		TouchUtils.clickView(this, login_Btn);
+	}
+	public void test_pwdNull() {
+		TouchUtils.tapView(this, uservalueEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
+
+		TouchUtils.tapView(this, pwdvalueEdt);
+		getInstrumentation().sendStringSync("");
+
+		TouchUtils.clickView(this, login_Btn);
+	}
+	public void test_userInvalid() {
+		TouchUtils.tapView(this, uservalueEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.USER_INVALID);
+
+		TouchUtils.tapView(this, pwdvalueEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
+
+		TouchUtils.clickView(this, login_Btn);
+	}
+	public void test_pwdInvalid() {
+		TouchUtils.tapView(this, uservalueEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
+
+		TouchUtils.tapView(this, pwdvalueEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PWD_INVALID);
+
+		TouchUtils.clickView(this, login_Btn);
+	}
+	public void test_user_pwd_Empty() {
+		TouchUtils.tapView(this, uservalueEdt);
+		getInstrumentation().sendStringSync("");
+
+		TouchUtils.tapView(this, pwdvalueEdt);
+		getInstrumentation().sendStringSync("");
+
+		TouchUtils.clickView(this, login_Btn);
+	}
 }

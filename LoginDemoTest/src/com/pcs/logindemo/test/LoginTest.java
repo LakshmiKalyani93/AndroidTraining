@@ -10,12 +10,9 @@ import com.pcs.logindemo.LoginActivity;
 
 public class LoginTest extends ActivityInstrumentationTestCase2<LoginActivity>{
 
-	
 	private LoginActivity activity;
-
-	private EditText uservalueEdt;
-	private EditText pwdvalueEdt;
-	private Button login_Btn;
+	private EditText emailEdt,pwdEdt,userEdt,phnEdt;
+	private Button loginBtn;
 
 	public LoginTest() {
 		super(LoginActivity.class);
@@ -26,9 +23,11 @@ public class LoginTest extends ActivityInstrumentationTestCase2<LoginActivity>{
 		super.setUp();
 		activity = getActivity();
 		assertNotNull(activity);
-		uservalueEdt = (EditText) activity.findViewById(com.pcs.logindemo.R.id.user_edt);
-		pwdvalueEdt = (EditText) activity.findViewById(com.pcs.logindemo.R.id.pwd_edt);
-		login_Btn = (Button) activity.findViewById(com.pcs.logindemo.R.id.login_btn);
+		userEdt = (EditText) activity.findViewById(com.pcs.logindemo.R.id.user_edt);
+		emailEdt = (EditText) activity.findViewById(com.pcs.logindemo.R.id.email_edt);
+		phnEdt = (EditText) activity.findViewById(com.pcs.logindemo.R.id.phn_edt);
+		pwdEdt = (EditText) activity.findViewById(com.pcs.logindemo.R.id.pwd_edt);
+		loginBtn = (Button) activity.findViewById(com.pcs.logindemo.R.id.login_btn);
 	}
 	@Override
 	protected void tearDown() throws Exception {
@@ -37,62 +36,152 @@ public class LoginTest extends ActivityInstrumentationTestCase2<LoginActivity>{
 
 	public void testPreconditions() {
 		assertNotNull("Failed in getting activity context", getActivity());
-		assertNotNull("Unable to find UserView", uservalueEdt);
-		assertNotNull("Unable to find PasswordView", pwdvalueEdt);
-		assertNotNull("Unable to find ButtonView", login_Btn);
+		assertNotNull("Unable to find EmailView", emailEdt);
+		assertNotNull("Unable to find PhoneView", phnEdt);
+		assertNotNull("Unable to find UserView", userEdt);
+		assertNotNull("Unable to find PasswordView", pwdEdt);
+		assertNotNull("Unable to find ButtonView", loginBtn);
 	}
 	public void test_login() {
-		TouchUtils.tapView(this, uservalueEdt);
+		TouchUtils.tapView(this, userEdt);
 		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
 
-		TouchUtils.tapView(this, pwdvalueEdt);
+		TouchUtils.tapView(this, pwdEdt);
 		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
 
-		TouchUtils.clickView(this, login_Btn);
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.EMAIL);
+
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PHONE);
+
+		TouchUtils.clickView(this, loginBtn);
 	}
 	public void test_userNull() {
-		TouchUtils.tapView(this, uservalueEdt);
+		TouchUtils.tapView(this, userEdt);
 		getInstrumentation().sendStringSync("");
 
-		TouchUtils.tapView(this, pwdvalueEdt);
+		TouchUtils.tapView(this, pwdEdt);
 		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
 
-		TouchUtils.clickView(this, login_Btn);
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.EMAIL);
+
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PHONE);
+		TouchUtils.clickView(this, loginBtn);
 	}
 	public void test_pwdNull() {
-		TouchUtils.tapView(this, uservalueEdt);
+		TouchUtils.tapView(this, userEdt);
 		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
 
-		TouchUtils.tapView(this, pwdvalueEdt);
+		TouchUtils.tapView(this, pwdEdt);
 		getInstrumentation().sendStringSync("");
 
-		TouchUtils.clickView(this, login_Btn);
-	}
-	public void test_userInvalid() {
-		TouchUtils.tapView(this, uservalueEdt);
-		getInstrumentation().sendStringSync(Constants.KeyExtras.USER_INVALID);
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.EMAIL);
 
-		TouchUtils.tapView(this, pwdvalueEdt);
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PHONE);
+		TouchUtils.clickView(this, loginBtn);
+	}
+	public void test_phnNull() {
+		TouchUtils.tapView(this, userEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
+
+		TouchUtils.tapView(this, pwdEdt);
 		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
 
-		TouchUtils.clickView(this, login_Btn);
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.EMAIL);
+
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync("");
+		TouchUtils.clickView(this, loginBtn);
 	}
-	public void test_pwdInvalid() {
-		TouchUtils.tapView(this, uservalueEdt);
+	public void test_emailNull() {
+		TouchUtils.tapView(this, userEdt);
 		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
 
-		TouchUtils.tapView(this, pwdvalueEdt);
+		TouchUtils.tapView(this, pwdEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
+
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync("");
+
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PHONE);
+		TouchUtils.clickView(this, loginBtn);
+	}
+	public void test_userInvalid() {
+		TouchUtils.tapView(this, userEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.USER_INVALID);
+
+		TouchUtils.tapView(this, pwdEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
+
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.EMAIL);
+
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PHONE);
+		TouchUtils.clickView(this, loginBtn);
+	}
+	public void test_pwdInvalid() {
+		TouchUtils.tapView(this, userEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
+
+		TouchUtils.tapView(this, pwdEdt);
 		getInstrumentation().sendStringSync(Constants.KeyExtras.PWD_INVALID);
 
-		TouchUtils.clickView(this, login_Btn);
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.EMAIL);
+
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PHONE);
+		TouchUtils.clickView(this, loginBtn);
 	}
-	public void test_user_pwd_Empty() {
-		TouchUtils.tapView(this, uservalueEdt);
+	public void test_emailInvalid() {
+		TouchUtils.tapView(this, userEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
+
+		TouchUtils.tapView(this, pwdEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
+
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.EMAIL_INVALID);
+
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PHONE);
+		TouchUtils.clickView(this, loginBtn);
+	}
+	public void test_phnInvalid() {
+		TouchUtils.tapView(this, userEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.USERNAME);
+
+		TouchUtils.tapView(this, pwdEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PASSWORD);
+
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.EMAIL);
+
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync(Constants.KeyExtras.PHONE_INVALID);
+		TouchUtils.clickView(this, loginBtn);
+	}
+
+	public void test_allEmpty() {
+		TouchUtils.tapView(this, userEdt);
 		getInstrumentation().sendStringSync("");
 
-		TouchUtils.tapView(this, pwdvalueEdt);
+		TouchUtils.tapView(this, pwdEdt);
 		getInstrumentation().sendStringSync("");
 
-		TouchUtils.clickView(this, login_Btn);
+		TouchUtils.tapView(this, emailEdt);
+		getInstrumentation().sendStringSync("");
+
+		TouchUtils.tapView(this, phnEdt);
+		getInstrumentation().sendStringSync("");
+		TouchUtils.clickView(this, loginBtn);
 	}
 }

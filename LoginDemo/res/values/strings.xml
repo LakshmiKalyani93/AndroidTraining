@@ -4,13 +4,15 @@
     <string name="user_hint">Enter UserName!</string>
     <string name="title">User Credentials</string>
     <string name="pwd_hint">Enter Password!</string>
+    <string name="email_hint">Enter Email Id!</string>
+    <string name="phn_hint">Enter PhoneNumber!</string>
     <string name="login">Log In</string>
     <string name="cancel">Cancel</string>
-     <string name="sucess">Logedd in successfully</string>
-    <string name="failure">Both fields null,Failed to login</string>
-    <string name="user_null">Username Shouldn\'t be null</string>
-    <string name="pwd_null">Password Shouldn\'t be null</string>
+    <string name="sucess">Logedd in successfully</string>
+    <string name="failure">Don\'t leave any fields empty,Failed to login</string>
     <string name="invalid_user">Invalid UserName</string>
     <string name="invalid_pwd">Invalid Password</string>
+    <string name="invalid_email">Check Email Id Once</string>
+    <string name="invalid_phn">Invalid Phone Number,Should contain only 10 digits</string>
 
 </resources>

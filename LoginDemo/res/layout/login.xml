@@ -25,6 +25,15 @@
         android:hint="@string/user_hint"
         android:inputType="text"
         android:textColor="@color/white" />
+    
+     <EditText
+        android:id="@+id/email_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+  	 	 android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/pwd_edt"
@@ -33,9 +42,17 @@
         android:layout_marginTop="10dp"
         android:hint="@string/pwd_hint"
         android:inputType="text"
-  
-        android:textColor="@color/white" />
+  	 	 android:textColor="@color/white" />
 
+   
+    <EditText
+        android:id="@+id/phn_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/phn_hint"
+        android:inputType="phone"
+  	 	 android:textColor="@color/white" />
     <Button
         android:id="@+id/login_btn"
         android:layout_width="wrap_content"
@@ -43,5 +60,5 @@
         android:layout_gravity="center"
         android:padding="20dp"
         android:text="@string/login" />
-
+   
 </LinearLayout>

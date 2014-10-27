@@ -63,7 +63,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	public void onItemClick(int mPosition,int id) {
 		String temp=mStringUrls[mPosition];
 		Toast.makeText(MainActivity.this,
-				"\n UserID :"+id+"\nImage URL:\t"+temp ,
+				"UserID :"+id+"\nImage URL:\t"+temp ,
 				Toast.LENGTH_LONG).show();
 
 	}

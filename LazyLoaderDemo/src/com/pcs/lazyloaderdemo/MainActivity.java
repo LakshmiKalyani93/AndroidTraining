@@ -1,6 +1,7 @@
 package com.pcs.lazyloaderdemo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 
 import com.pcs.adapters.ImageLoaderAdapter;
 
+/*creating an application that downloads and loads the images from the web
+ * @author:Kalyani*/
 public class MainActivity extends Activity implements OnClickListener{
 	private Button refreshBtn;
 	private ListView listView;
@@ -18,20 +21,25 @@ public class MainActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		setContentView(R.layout.main);
 		super.onCreate(savedInstanceState);
-
+		//fetching listview of the layout main
 		listView=(ListView)findViewById(R.id.listview);
+		// Create custom adapter for listview
 		adapter=new ImageLoaderAdapter(MainActivity.this,mStringUrls);
+		//Set adapter to listview
 		listView.setAdapter(adapter);
-
+		//fetching button view of the layout main
 		refreshBtn=(Button)findViewById(R.id.button);
+		//settings on click listener
 		refreshBtn.setOnClickListener(this);
 	}
 	@Override
 	public void onClick(View v) {
+		//Refresh cache directory downloaded images
 		adapter.imageLoader.clearCache();
+		//Notifying on each interval when data set is changed
 		adapter.notifyDataSetChanged();		
 	}
-
+	// Image urls used in ImageLoaderAdapter.java file
 	private String[] mStringUrls={
 
 			"http://www.clipartpal.com/_thumbs/pd/education/large_open_book.png",
@@ -51,11 +59,12 @@ public class MainActivity extends Activity implements OnClickListener{
 			"http://100things.com.au/wp-content/uploads/2014/05/novels.gif",
 			"http://stockfresh.com/files/f/filata/m/26/1158015_stock-photo-apple-and-books.jpg"
 	};
-	public void onItemClick(int mPosition) {
-		// TODO Auto-generated method stub
+	//Toasting out the Image URL with User ID
+	public void onItemClick(int mPosition,int id) {
 		String temp=mStringUrls[mPosition];
 		Toast.makeText(MainActivity.this,
-				"Image URL : "+temp,
+				"\n UserID :"+id+"\nImage URL:\t"+temp ,
 				Toast.LENGTH_LONG).show();
+
 	}
 }

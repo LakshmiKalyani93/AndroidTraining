@@ -49,7 +49,7 @@ public class ImageLoader {
 	final int stub_id=R.drawable.ic_launcher;
 
 	public void clearCache() {
-
+		 //Clear cache directory downloaded images and stored data in maps
 		memoryCache.clear();
 		fileCache.clear();
 
@@ -79,13 +79,13 @@ public class ImageLoader {
 	private void queuePhoto(String url, ImageView imageView)
 	{
 		// Store image and url in PhotoToLoad object
-		PhotoToLoad p = new PhotoToLoad(url, imageView);
+		PhotoToLoad photo = new PhotoToLoad(url, imageView);
 
 		// pass PhotoToLoad object to PhotosLoader runnable class
 		// and submit PhotosLoader runnable to executers to run runnable
 		// Submits a PhotosLoader runnable task for execution 
 
-		executorService.submit(new PhotosLoader(p));
+		executorService.submit(new PhotosLoader(photo));
 	}
 
 	//Task for the queue
@@ -93,9 +93,9 @@ public class ImageLoader {
 	{
 		public String url;
 		public ImageView imageView;
-		public PhotoToLoad(String u, ImageView i){
-			url=u;
-			imageView=i;
+		public PhotoToLoad(String url, ImageView img){
+			url=url;
+			imageView=img;
 		}
 	}
 
@@ -129,8 +129,8 @@ public class ImageLoader {
 				// BitmapDisplayer run method will call
 				handler.post(bd);
 
-			}catch(Throwable th){
-				th.printStackTrace();
+			}catch(Throwable r){
+				r.printStackTrace();
 			}
 		}
 	}

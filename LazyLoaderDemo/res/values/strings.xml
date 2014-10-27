@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">LazyLoaderDemo</string>
+    <string name="user">User ID</string>
+    <string name="notify">Notifications</string>
+    <string name="refresh">Refresh</string>
+
+</resources>

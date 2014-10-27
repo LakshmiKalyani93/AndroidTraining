@@ -93,8 +93,8 @@ public class ImageLoader {
 	{
 		public String url;
 		public ImageView imageView;
-		public PhotoToLoad(String url, ImageView img){
-			url=url;
+		public PhotoToLoad(String URL, ImageView img){
+			url=URL;
 			imageView=img;
 		}
 	}
@@ -113,21 +113,21 @@ public class ImageLoader {
 				if(imageViewReused(photoToLoad))
 					return;
 				// download image from web url
-				Bitmap bmp = getBitmap(photoToLoad.url);
+				Bitmap bitMap = getBitmap(photoToLoad.url);
 
 				// set image data in Memory Cache
-				memoryCache.put(photoToLoad.url, bmp);
+				memoryCache.put(photoToLoad.url, bitMap);
 
 				if(imageViewReused(photoToLoad))
 					return;
 
 				// Get bitmap to display
-				BitmapDisplayer bd=new BitmapDisplayer(bmp, photoToLoad);
+				BitmapDisplayer displayer=new BitmapDisplayer(bitMap, photoToLoad);
 
 				// Causes the Runnable bd (BitmapDisplayer) to be added to the message queue.
 				// The runnable will be run on the thread to which this handler is attached.
 				// BitmapDisplayer run method will call
-				handler.post(bd);
+				handler.post(displayer);
 
 			}catch(Throwable r){
 				r.printStackTrace();
@@ -141,9 +141,9 @@ public class ImageLoader {
 
 		//from SD cache
 		//CHECK : if trying to decode file which not exist in cache return null
-		Bitmap b = decodeFile(f);
-		if(b!=null)
-			return b;
+		Bitmap map = decodeFile(f);
+		if(map!=null)
+			return map;
 
 		// Download image file from web
 		try {
@@ -188,10 +188,10 @@ public class ImageLoader {
 		try {
 
 			//Decode image size
-			BitmapFactory.Options o = new BitmapFactory.Options();
-			o.inJustDecodeBounds = true;
+			BitmapFactory.Options factory = new BitmapFactory.Options();
+			factory.inJustDecodeBounds = true;
 			FileInputStream stream1=new FileInputStream(f);
-			BitmapFactory.decodeStream(stream1,null,o);
+			BitmapFactory.decodeStream(stream1,null,factory);
 			stream1.close();
 
 			//Find the correct scale value. It should be the power of 2.
@@ -199,7 +199,7 @@ public class ImageLoader {
 			// Set width/height of recreated image
 			final int REQUIRED_SIZE=85;
 
-			int width_tmp=o.outWidth, height_tmp=o.outHeight;
+			int width_tmp=factory.outWidth, height_tmp=factory.outHeight;
 			int scale=1;
 			while(true){
 				if(width_tmp/2 < REQUIRED_SIZE || height_tmp/2 < REQUIRED_SIZE)
@@ -210,10 +210,10 @@ public class ImageLoader {
 			}
 
 			//decode with current scale values
-			BitmapFactory.Options o2 = new BitmapFactory.Options();
-			o2.inSampleSize=scale;
+			BitmapFactory.Options option = new BitmapFactory.Options();
+			option.inSampleSize=scale;
 			FileInputStream stream2=new FileInputStream(f);
-			Bitmap bitmap=BitmapFactory.decodeStream(stream2, null, o2);
+			Bitmap bitmap=BitmapFactory.decodeStream(stream2, null, option);
 			stream2.close();
 			return bitmap;
 

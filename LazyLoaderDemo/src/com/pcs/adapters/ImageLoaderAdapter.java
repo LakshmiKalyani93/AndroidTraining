@@ -88,7 +88,7 @@ public class ImageLoaderAdapter extends BaseAdapter implements OnClickListener{
 		ImageView image=holder.web_img;
 
 		//DisplayImage function from ImageLoader Class
-		imageLoader.DisplayImage(urlData[position], image);
+		imageLoader.displayImage(urlData[position], image);
 
 		/******** Set Item Click Listener for LayoutInflater for each row ***********/
 		convertView.setOnClickListener(new OnItemClickListener(position,user_id));

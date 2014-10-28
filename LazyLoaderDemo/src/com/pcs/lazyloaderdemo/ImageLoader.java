@@ -55,7 +55,7 @@ public class ImageLoader {
 
 	}
 
-	public void DisplayImage(String url, ImageView image) {
+	public void displayImage(String url, ImageView image) {
 
 		imageViews.put(image, url);
 

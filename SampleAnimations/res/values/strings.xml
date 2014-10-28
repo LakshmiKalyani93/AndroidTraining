@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AnimationsDemo</string>
+    <string name="anim_start">Animation Started</string>
+    <string name="anim_stop">Animation Stopped</string>
+    <string name="anim_repeat">Animation Repeated</string>
+    <string name="rotate">Rotate</string>
+    <string name="fade">Fade In</string>
+    <string name="navigate">Navigate to other Screen</string>
+    <string name="desc">Animations</string>
+    <string name="start">Move Image</string>
+    <string name="flip">Flip Image</string>
+    <string name="bounce">Bounce Image</string>
+     <string name="error_navigate_msg">Error while getting an Intent</string>
+    <string name="zoom">Zoom Control</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action">Zoom Animation</string>
+
+</resources>

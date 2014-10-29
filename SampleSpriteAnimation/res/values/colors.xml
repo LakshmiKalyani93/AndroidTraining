@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red"> #DC143C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="sea_green">#008080</color>
+    <color name="black">#000000</color>
+    <color name="cade_blue">#5F9EA0</color>
+
+</resources>

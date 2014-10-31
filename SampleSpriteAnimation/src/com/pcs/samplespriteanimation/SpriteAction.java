@@ -1,5 +1,9 @@
 package com.pcs.samplespriteanimation;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,33 +13,47 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class SpriteAction extends View{
+
+
 	private Context mContext;
 	private boolean begin;
 	private int frameWidth;
 	private int frameHeight;
 	public MoveThread moveThread;
+	private Bitmap bmp;
+
+	private List<SpriteAction> sprites = new ArrayList<SpriteAction>();
 	//creating a constructor...
+
 	public SpriteAction(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		mContext=context;
-		//initializing the call..
+		createSprites();
+		
+	}
+
+	public SpriteAction(Context context, Bitmap bmp) {
+		super(context);
+		this.bmp=bmp;
+		mContext=context;
 		init();
 	}
-	//creating an instance to the BitMap so that we can interact with the canvas..
-	Bitmap bitMap=BitmapFactory.decodeResource(getResources(), R.drawable.spritebird);
-	Rect src=new Rect();
-	Rect dest=new Rect();
-	//init method...
+
 	private void init() {
-		frameWidth=(bitMap.getWidth())/5;
-		frameHeight=(bitMap.getHeight())/3;
+		frameWidth=(bmp.getWidth())/5;
+		frameHeight=(bmp.getHeight())/3;
 		dest.left=dest.top=0;
 		dest.right=frameWidth;
 		dest.bottom=frameHeight;
 	}
+
+	Rect src=new Rect();
+	Rect dest=new Rect();
+	//init method...
+
 	//starting the animation....
 	public void startAnimation() {
-
+		
 		begin=true;
 		dest.left=0;
 		dest.top=0;
@@ -53,12 +71,29 @@ public class SpriteAction extends View{
 		}
 	}
 	//onDraw method to draw the canvas ...
+	@SuppressLint("WrongCall")
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
-		canvas.drawBitmap(bitMap, src, dest, null);
+		
+		for (SpriteAction sprite : sprites) {
+			sprite.onDraw(canvas);
+
+		}
 	}
-	//Handling the thread with our own customization of the sprint image translation...
+
+	private void createSprites() {
+
+		sprites.add(createSprite(R.drawable.spritebird));
+		sprites.add(createSprite(R.drawable.sprite_bird));
+	}
+	
+	
+	private SpriteAction createSprite(int resouce) {
+		Bitmap bmp = BitmapFactory.decodeResource(getResources(), resouce);
+		return new SpriteAction(getContext(), bmp);
+	}
+	//Handling the thread with our own customisation of the sprint image translation...
 	public class MoveThread extends Thread{
 
 		public int screenWidth,screenHeight;
@@ -76,10 +111,8 @@ public class SpriteAction extends View{
 						src.top = rows*frameHeight;
 						src.right = src.left+frameWidth;
 						src.bottom = src.top+frameHeight;
-
 						dest.left++;
 						dest.top++;
-
 						dest.right = dest.left+frameWidth;
 						dest.bottom = dest.top+frameHeight;
 						postInvalidate();
@@ -94,8 +127,6 @@ public class SpriteAction extends View{
 			}
 		}
 	}
-
-
 }
 
 

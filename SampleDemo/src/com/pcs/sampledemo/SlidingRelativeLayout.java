@@ -4,9 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.ViewTreeObserver;
 import android.widget.RelativeLayout;
-/**
- * Created by paveld on 4/13/14.
- */
+
 public class SlidingRelativeLayout extends RelativeLayout {
 	private float yFraction = 0;
 	public SlidingRelativeLayout(Context context) {

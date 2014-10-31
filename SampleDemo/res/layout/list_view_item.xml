@@ -4,6 +4,8 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:padding="5dp"
+    android:text="Fruits Data"
+    android:textStyle="bold|italic"
     android:textAppearance="?android:attr/textAppearanceMedium" >
 
 </TextView>

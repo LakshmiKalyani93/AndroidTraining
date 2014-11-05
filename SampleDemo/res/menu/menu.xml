@@ -3,13 +3,13 @@
 
     <item
         android:id="@+id/share"
-        android:icon="@drawable/share_img"
+        android:icon="@android:drawable/ic_menu_set_as"
         android:title="@string/share"
         android:showAsAction="always|withText"        
         />
     <item
         android:id="@+id/add_item"
-        android:icon="@drawable/add_img"
+        android:icon="@android:drawable/ic_input_add"
         android:title="@string/add_item"
         android:showAsAction="always|withText"/>
     <item
@@ -17,5 +17,5 @@
         android:icon="@drawable/more_img"
         android:title="@string/other_options"
         android:showAsAction="always|withText"/>
-
+   
 </menu>

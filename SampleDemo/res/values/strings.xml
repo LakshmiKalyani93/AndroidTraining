@@ -5,7 +5,9 @@
     <string name="item_select_msg">Item Selected</string>
     <string name="add_item">Add items</string>
     <string name="other_options">Other options</string>
+    <string name="slide">Slide Menu</string>
     <string name="action_settings">Settings</string>
     <string name="action_show_list">Custom list item</string>
 
+   
 </resources>

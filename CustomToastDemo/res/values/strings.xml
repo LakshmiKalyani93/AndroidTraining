@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">CustomToastDemo</string>
+
+    <string-array name="noify_list">
+        <item> Hello! How Are You ?</item>
+        <item>Did You get the file..</item>
+        <item>There is an urgent notice.Look at it!</item>
+        <item>Join fans club Today</item>
+        <item>Leave request!</item>
+        <item>PFA : Bug in the file</item>
+        <item>See me in the office</item>
+        <item>Health Tips : Join Today</item>
+        <item>Job Offers : Refer www.noukari.com</item>
+        <item>Steel Plant : Registration last date on 01/1/2015</item>
+        <item>Meeting Today!</item>
+        <item>Shall we go out today?</item>
+        <item>Having Fun! Lets join gameworld.com</item>
+        <item>Important Assignments</item>
+        <item>Basecamp Updates : Anitha Gorli updated 2 hours ago...</item>
+        <item>Somebody requested Password  reset</item>
+        <item>Unable to view the page...sign into...</item>
+        <item>Important News and Daily Updates..</item>
+    </string-array>
+
+</resources>

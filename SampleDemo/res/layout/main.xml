@@ -8,15 +8,13 @@
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
-      />
+        android:visibility="visible" />
 
     <FrameLayout
-        android:layout_marginTop="200dp"
         android:id="@+id/list_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent"
-     />
-
+        android:layout_marginTop="200dp"
+        android:background="@android:color/transparent" />
+   
 </RelativeLayout>

@@ -41,7 +41,7 @@ public class SlidingListFragment extends ListFragment{
 				result = (TextView) LayoutInflater.from(parent.getContext())
 						.inflate(R.layout.list_view_item, parent, false);
 			}
-			result.setText(getResources().getString(R.string.action_show_list) + position);
+			result.setText(getResources().getString(R.string.action_show_list) +" #"+ position);
 			return result;
 		}
 	}

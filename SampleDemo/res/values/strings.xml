@@ -1,6 +1,26 @@
 <resources>
 
     <string name="app_name">SampleDemo</string>
+    <string name="github">Git Hub</string>
+    <string name="pcs">Paradigm Creatives</string>
+    <string name="app_store">Play Store</string>
+    <string name="mobogenie">Mobogenie</string>
+    <string name="repository">Git Repositries</string>
+    <string name="git_status">Git Status </string>
+    <string name="git_url">Git Url</string>
+    <string name="git_commit">Git Commits</string>
+    <string name="software_dev">Software Developers</string>
+    <string name="hr_manage">HR Management</string>
+    <string name="bpo_section">BPO Section</string>
+    <string name="hardware_dev">Hardware Developers</string>
+    <string name="applications">Applications</string>
+    <string name="books">Books</string>
+    <string name="games">Games</string>
+    <string name="media">Media</string>
+    <string name="mobo_app">MoboGenie Apps</string>
+    <string name="ebooks">Ebooks</string>
+    <string name="videos">Videos</string>
+    <string name="music">Music</string>
     <string name="share">Share list</string>
     <string name="item_select_msg">Item Selected</string>
     <string name="add_item">Add items</string>
@@ -9,5 +29,4 @@
     <string name="action_settings">Settings</string>
     <string name="action_show_list">Custom list item</string>
 
-   
 </resources>

@@ -75,20 +75,17 @@ public class CustomAdapter extends BaseAdapter {
 				// Call toast.xml file for toast layout
 				View toastRoot = layoutInflater.inflate(R.layout.inflate, null);
 				toastRoot.setBackgroundColor(Color.LTGRAY); 
-				
 				Toast toast = new Toast(mContext);
 				TextView user_toast_txtView=(TextView)toastRoot.findViewById(R.id.user);
 				TextView notify_toast_txtView=(TextView)toastRoot.findViewById(R.id.notify);
 				user_toast_txtView.setText(userData[position]);
-				notify_toast_txtView.setText(list[position]);
+				notify_toast_txtView.setText(list[position]);	
 				// Set layout to toast
 				toast.setView(toastRoot);
 				toast.setGravity(Gravity.CENTER,
 						40, 50);
 				toast.setDuration(Toast.LENGTH_LONG);
-
 				toast.show();
-
 			}
 		});
 

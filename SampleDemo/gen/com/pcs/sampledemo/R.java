@@ -40,35 +40,62 @@ public final class R {
     }
     public static final class id {
         public static final int actionbar_top=0x7f090000;
-        public static final int add_item=0x7f090008;
-        public static final int checkbox=0x7f090003;
-        public static final int list_fragment_container=0x7f090006;
-        public static final int listview=0x7f090005;
-        public static final int other_options=0x7f090009;
-        public static final int share=0x7f090007;
+        public static final int add_item=0x7f09000d;
+        public static final int checkbox=0x7f090004;
+        public static final int child_item=0x7f090003;
+        public static final int content_frame=0x7f090009;
+        public static final int drawer_layout=0x7f090008;
+        public static final int expandable_right_drawer=0x7f09000a;
+        public static final int list_fragment_container=0x7f090007;
+        public static final int listview=0x7f090006;
+        public static final int other_options=0x7f09000e;
+        public static final int parent_item=0x7f09000b;
+        public static final int share=0x7f09000c;
         public static final int slide_drawer_btn=0x7f090002;
-        public static final int text_view=0x7f090004;
+        public static final int text_view=0x7f090005;
         public static final int title=0x7f090001;
     }
     public static final class layout {
         public static final int actionbar_top=0x7f030000;
-        public static final int inflate=0x7f030001;
-        public static final int layout=0x7f030002;
-        public static final int list_view_item=0x7f030003;
-        public static final int main=0x7f030004;
+        public static final int child=0x7f030001;
+        public static final int inflate=0x7f030002;
+        public static final int layout=0x7f030003;
+        public static final int list_view_item=0x7f030004;
+        public static final int main=0x7f030005;
+        public static final int parent=0x7f030006;
     }
     public static final class menu {
         public static final int menu=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060006;
-        public static final int action_show_list=0x7f060007;
-        public static final int add_item=0x7f060003;
+        public static final int action_settings=0x7f06001a;
+        public static final int action_show_list=0x7f06001b;
+        public static final int add_item=0x7f060017;
         public static final int app_name=0x7f060000;
-        public static final int item_select_msg=0x7f060002;
-        public static final int other_options=0x7f060004;
-        public static final int share=0x7f060001;
-        public static final int slide=0x7f060005;
+        public static final int app_store=0x7f060003;
+        public static final int applications=0x7f06000d;
+        public static final int books=0x7f06000e;
+        public static final int bpo_section=0x7f06000b;
+        public static final int ebooks=0x7f060012;
+        public static final int games=0x7f06000f;
+        public static final int git_commit=0x7f060008;
+        public static final int git_status=0x7f060006;
+        public static final int git_url=0x7f060007;
+        public static final int github=0x7f060001;
+        public static final int hardware_dev=0x7f06000c;
+        public static final int hr_manage=0x7f06000a;
+        public static final int item_select_msg=0x7f060016;
+        public static final int media=0x7f060010;
+        public static final int mobo_app=0x7f060011;
+        public static final int mobogenie=0x7f060004;
+        public static final int music=0x7f060014;
+        public static final int other_options=0x7f060018;
+        public static final int pcs=0x7f060002;
+        public static final int repository=0x7f060005;
+        public static final int share=0x7f060015;
+        public static final int slide=0x7f060019;
+        public static final int software_dev=0x7f060009;
+        public static final int videos=0x7f060013;
     }
     public static final class style {
         /** 

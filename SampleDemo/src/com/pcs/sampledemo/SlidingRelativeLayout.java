@@ -5,8 +5,14 @@ import android.util.AttributeSet;
 import android.view.ViewTreeObserver;
 import android.widget.RelativeLayout;
 
+/*creating SlidingRelative layout the extends RelativeLayout
+ * Setting up the coordinates to animate the fragment layout
+ * @Author Kalyani pcs-232*/
+
 public class SlidingRelativeLayout extends RelativeLayout {
 	private float yFraction = 0;
+	
+	//creating constructors...
 	public SlidingRelativeLayout(Context context) {
 		super(context);
 	}
@@ -17,6 +23,7 @@ public class SlidingRelativeLayout extends RelativeLayout {
 		super(context, attrs, defStyle);
 	}
 	private ViewTreeObserver.OnPreDrawListener preDrawListener = null;
+	//setting YFraction for the layout....
 	public void setYFraction(float fraction) {
 		this.yFraction = fraction;
 		if (getHeight() == 0) {

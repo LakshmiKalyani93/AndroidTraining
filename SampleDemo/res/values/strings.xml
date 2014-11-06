@@ -29,4 +29,26 @@
     <string name="action_settings">Settings</string>
     <string name="action_show_list">Custom list item</string>
 
+    <string-array name="friuts_list">
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Avocado</item>
+        <item>Blueberry</item>
+        <item>Coconut</item>
+        <item>Durian</item>
+        <item>Guava</item>
+        <item>Kiwifruit</item>
+        <item>Jack-Fruit</item>
+        <item>Mango</item>
+        <item>Olive</item>
+        <item>Pear</item>
+        <item>Pine-Apple</item>
+        <item>Mulberry</item>
+        <item>Plum</item>
+        <item>Sugar-apple</item>
+        <item>Cherry</item>
+        <item>Date</item>
+        <item>Papaya</item>
+    </string-array>
+
 </resources>

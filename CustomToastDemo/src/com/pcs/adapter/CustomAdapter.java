@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.pcs.customtoastdemo.R;
 
-
 public class CustomAdapter extends BaseAdapter {
 	private  Context mContext ;
 	private String[] userData;
@@ -26,22 +25,18 @@ public class CustomAdapter extends BaseAdapter {
 		userData=user_data;
 		layoutInflater=LayoutInflater.from(mContext);
 	}
-
 	@Override
 	public int getCount() {
 		return userData.length;
 	}
-
 	@Override
 	public Object getItem(int position) {
 		return position;
 	}
-
 	@Override
 	public long getItemId(int position) {
 		return position;
 	}
-
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {

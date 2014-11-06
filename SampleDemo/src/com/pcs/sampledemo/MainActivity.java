@@ -9,25 +9,22 @@ import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.DrawerLayout.DrawerListener;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import com.pcs.adapter.CustomAdapter;
 import com.pcs.adapter.ExpandableListAdapter;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
@@ -38,46 +35,44 @@ public class MainActivity extends Activity{
 	private HashMap<String, List<String>> children;
 	private ExpandableListAdapter expandableListAdapter;
 	private List<String> parents;
-
-	static final String[] fruits = new String[] { "Apple", "Avocado", "Banana",
-		"Blueberry", "Coconut", "Durian", "Guava", "Kiwifruit",
-		"Jackfruit", "Mango", "Olive", "Pear", "Sugar-apple","Cherry","Date","Papaya","Peach","Pine Apple","Mulberry","Plum" };
-
-	private ListView listView;
-
+	
+	/*Creating an application that shows the slide drawer implementation from right to left 
+	 * and displays a listview in the background
+	 * allows a bottom to top animation for a fragment layout that shows listview */
+	
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@SuppressLint("NewApi")
-	@Override
+	@Override	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);		
 		setContentView(R.layout.main);
-		listView=(ListView)findViewById(R.id.listview);
-		CustomAdapter adapter=new CustomAdapter(this,fruits);
-		View header = (View)getLayoutInflater().inflate(R.layout.list_view_item, null);
-		listView.addHeaderView(header);
-		listView.setAdapter(adapter);
-
+		//loading the fragment....
+		Fragment fragment = new ListFragment(this);
+		FragmentManager fragmentManager = getFragmentManager();
+		fragmentManager.beginTransaction()
+		.replace(R.id.content_frame, fragment).commit();
+		
 		ActionBar actionBar = getActionBar();  
-
 		LayoutInflater mInflater = LayoutInflater.from(this);
+		//inflating the view...
 		View mCustomView = mInflater.inflate(R.layout.actionbar_top, null);
 		ImageButton imageButton = (ImageButton) mCustomView
 				.findViewById(R.id.slide_drawer_btn);
 		imageButton.setOnClickListener(slideMenuOnclickListener);
-
 		actionBar.setCustomView(mCustomView);
 		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME|ActionBar.DISPLAY_SHOW_CUSTOM);
 		actionBar.setDisplayShowCustomEnabled(true);	
 		actionBar.setDisplayShowTitleEnabled(false);
 		//Calling own method to initiate drawer 
-				setUpDrawer();
-
+		setUpDrawer();
+			
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.menu, menu);
 		return true;
 	}
+
 	@SuppressLint("NewApi")
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -85,10 +80,10 @@ public class MainActivity extends Activity{
 		int v=item.getItemId();
 		switch (v) {
 		case R.id.share:
-			Toast.makeText(getApplicationContext(), getResources().getString(R.string.share), Toast.LENGTH_LONG).show();
+			Toast.makeText(this, getResources().getString(R.string.share), Toast.LENGTH_LONG).show();
 			return true;
 		case R.id.add_item:
-			Toast.makeText(getApplicationContext(), getResources().getString(R.string.add_item), Toast.LENGTH_LONG).show();
+			Toast.makeText(this, getResources().getString(R.string.add_item), Toast.LENGTH_LONG).show();
 			return true;
 		case R.id.other_options:
 			item.setIcon(R.drawable.more_img);
@@ -98,8 +93,8 @@ public class MainActivity extends Activity{
 			return super.onOptionsItemSelected(item);
 		}
 	}
-
-	private void toggleList() {
+	public void toggleList() {
+		//loading the fragment...
 		Fragment fragment = getFragmentManager().findFragmentByTag(com.pcs.helper.Constants.KeyExtras.LIST_FRAGMENT_TAG);
 		if (fragment != null) {
 			getFragmentManager().popBackStack();
@@ -109,14 +104,13 @@ public class MainActivity extends Activity{
 					R.anim.slidedown,
 					R.anim.slideup,
 					R.anim.slidedown)
-					.add(R.id.list_fragment_container, SlidingListFragment
+					.add(R.id.list_fragment_container,SlidingListFragment
 							.instantiate(this, SlidingListFragment.class.getName()),
 							com.pcs.helper.Constants.KeyExtras.LIST_FRAGMENT_TAG
 							).addToBackStack(null).commit();
 		}
 	}
-	
-	
+		
 	//Initializing, setting attributes, adding adapters are done in this method
 		private void setUpDrawer() {
 
@@ -206,29 +200,6 @@ public class MainActivity extends Activity{
 			}
 		};
 
-		private OnItemClickListener mDrawerItemClickedListener = new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
-					long arg3) {
-
-				switch (position) {
-				case 0:
-
-					break;
-				case 1:
-
-					break;
-				case 2:
-
-					break;
-				default:
-					return;
-				}
-
-				mDrawerLayout.closeDrawer(expandableListView);
-			}
-		};
-
 		//Own implemented Drawer listener
 		private DrawerListener mDrawerListener = new DrawerListener() {
 
@@ -236,16 +207,13 @@ public class MainActivity extends Activity{
 			public void onDrawerStateChanged(int status) {
 
 			}
-
 			@Override
 			public void onDrawerSlide(View view, float slideArg) {
 
 			}
-
 			@Override
 			public void onDrawerOpened(View view) {
 			}
-
 			@Override
 			public void onDrawerClosed(View view) {
 			}
@@ -291,15 +259,10 @@ public class MainActivity extends Activity{
 
 			//Adding each child to parents
 			children.put(parents.get(0), github);
-			children.put(parents.get(1), app_store);
+			children.put(parents.get(1), pcs);
 			children.put(parents.get(2), app_store);
 			children.put(parents.get(3), mobogenie);
 		}
-
-	
-	
-	
-
 }
 
 

@@ -12,6 +12,9 @@ public final class R {
         public static final int slidedown=0x7f040000;
         public static final int slideup=0x7f040001;
     }
+    public static final class array {
+        public static final int friuts_list=0x7f070000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -39,33 +42,35 @@ public final class R {
         public static final int venus=0x7f020011;
     }
     public static final class id {
-        public static final int actionbar_top=0x7f090000;
-        public static final int add_item=0x7f09000d;
-        public static final int checkbox=0x7f090004;
-        public static final int child_item=0x7f090003;
-        public static final int content_frame=0x7f090009;
-        public static final int drawer_layout=0x7f090008;
-        public static final int expandable_right_drawer=0x7f09000a;
-        public static final int list_fragment_container=0x7f090007;
-        public static final int listview=0x7f090006;
-        public static final int other_options=0x7f09000e;
-        public static final int parent_item=0x7f09000b;
-        public static final int share=0x7f09000c;
-        public static final int slide_drawer_btn=0x7f090002;
-        public static final int text_view=0x7f090005;
-        public static final int title=0x7f090001;
+        public static final int actionbar_top=0x7f0a0000;
+        public static final int add_item=0x7f0a000e;
+        public static final int checkbox=0x7f0a0005;
+        public static final int child_item=0x7f0a0003;
+        public static final int content_frame=0x7f0a0009;
+        public static final int drawer_layout=0x7f0a0008;
+        public static final int expandable_right_drawer=0x7f0a000a;
+        public static final int list_fragment_container=0x7f0a000b;
+        public static final int listview=0x7f0a0004;
+        public static final int other_options=0x7f0a000f;
+        public static final int parent_item=0x7f0a000c;
+        public static final int relative_layout=0x7f0a0007;
+        public static final int share=0x7f0a000d;
+        public static final int slide_drawer_btn=0x7f0a0002;
+        public static final int text_view=0x7f0a0006;
+        public static final int title=0x7f0a0001;
     }
     public static final class layout {
         public static final int actionbar_top=0x7f030000;
         public static final int child=0x7f030001;
-        public static final int inflate=0x7f030002;
-        public static final int layout=0x7f030003;
-        public static final int list_view_item=0x7f030004;
-        public static final int main=0x7f030005;
-        public static final int parent=0x7f030006;
+        public static final int fragment_list=0x7f030002;
+        public static final int inflate=0x7f030003;
+        public static final int layout=0x7f030004;
+        public static final int list_view_item=0x7f030005;
+        public static final int main=0x7f030006;
+        public static final int parent=0x7f030007;
     }
     public static final class menu {
-        public static final int menu=0x7f080000;
+        public static final int menu=0x7f090000;
     }
     public static final class string {
         public static final int action_settings=0x7f06001a;
@@ -119,10 +124,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f080001;
     }
 }

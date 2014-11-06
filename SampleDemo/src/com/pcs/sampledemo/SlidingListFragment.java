@@ -9,8 +9,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+/*Creating a fragment that animates from bottom to top
+ * Using an adapter that set the items in the listview
+ * @Author Kalyani pcs -232*/
 public class SlidingListFragment extends ListFragment{
 
+	private int count =15;
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.layout, container, false);
@@ -21,10 +25,12 @@ public class SlidingListFragment extends ListFragment{
 		super.onViewCreated(view, savedInstanceState);
 		setListAdapter(new MyListAdapter());
 	}
+	
+	//creating MyListadapter that extends BaseAdapter....
 	private class MyListAdapter extends BaseAdapter {
 		@Override
 		public int getCount() {
-			return 15;
+			return count;
 		}
 		@Override
 		public Object getItem(int position) {

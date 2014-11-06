@@ -46,13 +46,13 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		return childPosition;
 	}
 
-	// Returns the view of the child
+	// Returns the view of the child....
 	@Override
 	public View getChildView(int groupPosition, final int childPosition,
 			boolean isLastChild, View convertView, ViewGroup parent) {
 
 		final String childText = (String) getChild(groupPosition, childPosition);
-
+		//inflating the child view...
 		if (convertView == null) {
 			LayoutInflater infalInflater = (LayoutInflater) this.context
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -86,11 +86,13 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		return groupPosition;
 	}
 
-	// Returns the view of the parent
+	// Returns the view of the parent...
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
 			View convertView, ViewGroup parent) {
 		String headerTitle = (String) getGroup(groupPosition);
+
+		//inflating the parent view...
 		if (convertView == null) {
 			LayoutInflater infalInflater = (LayoutInflater) this.context
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

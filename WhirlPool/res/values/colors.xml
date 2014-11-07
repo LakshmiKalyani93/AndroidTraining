@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="red">#FF0000</color>
+    <color name="light_grey">#C0C0C0</color>
+    <color name="dark_grey">#989898</color>
+    <color name="light_red">#ef5350</color>
+    <color name="orange">#FF6600</color>
+    <color name="trans_orange">#99FF6600</color>
+    <color name="light_orange">#66FF6600</color>
+    <color name="gray">#99333333</color>
+    <color name="trans">#6600ffff</color>
+    <color name="gray_in">#66d3d3d3</color>
     
 </resources>

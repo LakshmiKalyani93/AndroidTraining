@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.Button;
 
+
 public class VerticalButton extends Button {
 	final boolean topDown;
 

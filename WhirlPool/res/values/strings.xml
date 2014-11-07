@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">WhirlPool</string>
+    <string name="shopper_title">WEEKEND SHOPPING LIST</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
@@ -13,5 +14,72 @@
     <string name="oven">Oven</string>
     <string name="fast_settings">Fast Settings</string>
     <string name="settings">Settings</string>
+    <string name="shopping_list">Shopping List</string>
+    <string name="smart_cook">Smart Cook</string>
+    <string name="nearby_supermarkets">Near By SuperMarkets</string>
+    <string name="inventory">Inventory</string>
+    <string name="barcode_scanner">BarCode Scanner</string>
+    <string name="fridge_status_fragment">Fridge Status</string>
+    <string name="fridge_warning_status_fragment">Fridge Warning Status</string>
+    <string name="fridge_timer_status_fragment">Fridge Timer Status</string>
+    <string name="oven_status_fragment">Oven Status</string>
+    <string name="oven_warning_status_fragment">Oven Warning Status</string>
+    <string name="oven_timer_status_fragment">Oven Timer Status</string>
+    <string name="github">Git Hub</string>
+    <string name="pcs">Paradigm Creatives</string>
+    <string name="app_store">Play Store</string>
+    <string name="mobogenie">Mobogenie</string>
+    <string name="repository">Git Repositries</string>
+    <string name="git_status">Git Status </string>
+    <string name="git_url">Git Url</string>
+    <string name="git_commit">Git Commits</string>
+    <string name="software_dev">Software Developers</string>
+    <string name="hr_manage">HR Management</string>
+    <string name="bpo_section">BPO Section</string>
+    <string name="hardware_dev">Hardware Developers</string>
+    <string name="applications">Applications</string>
+    <string name="books">Books</string>
+    <string name="games">Games</string>
+    <string name="media">Media</string>
+    <string name="mobo_app">MoboGenie Apps</string>
+    <string name="ebooks">Ebooks</string>
+    <string name="videos">Videos</string>
+    <string name="music">Music</string>
+    <string name="share">Share list</string>
+    <string name="item_select_msg">Item Selected</string>
+    <string name="add_item">Add items</string>
+    <string name="other_options">Other options</string>
+    <string name="slide">Slide Menu</string>
+   
+    
+    <string-array name="show_list">
+        <item >Order by alphabetical order</item>
+        <item >Show Only items not bought</item>
+        <item >Rename list</item>
+        <item >Remove list</item>
+    </string-array>
+
+    <string-array name="shopper_item_list">
+        <item>Category Drinks</item>
+        <item>Beer</item>
+        <item>Red Wine</item>
+        <item>Vodca</item>
+        <item>Tequila</item>
+        <item>Category Meat</item>
+        <item>Cow Meat</item>
+        <item>Chicken</item>
+        <item>Goat Meat</item>
+        <item>Mutton</item>
+        <item>Category Food</item>
+        <item>Dum Biriyani</item>
+        <item>Chicken Biriyani</item>
+        <item>Fish Fry</item>
+        <item>Prawn Curry</item>
+        <item>Category Staters</item>
+        <item>Chilly Soup</item>
+        <item>Chicken Soup</item>
+        <item>Tomoto Soup</item>
+        <item>Sweet Corn Soup</item>
+    </string-array>
 
 </resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/share"
+        android:icon="@android:drawable/ic_menu_set_as"
+        android:title="@string/share"
+        android:showAsAction="always|withText"        
+        />
+    <item
+        android:id="@+id/add_item"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="@string/add_item"
+        android:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/other_options"
+        android:icon="@drawable/more_img"
+        android:title="@string/other_options"
+        android:showAsAction="always|withText"/>
+   
+</menu>

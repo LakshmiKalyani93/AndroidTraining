@@ -6,3 +6,5 @@ public interface FridgeOrOvenContainer {
 	public static final String OVEN = "oven";
 
 }
+
+	
